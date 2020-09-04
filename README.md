@@ -19,7 +19,11 @@ Update your journal reference here after acceptance.
 ## Data reference
 
 ### Input data
-Reference for each minted data source for your input data.  
+Reference for each minted data source for your input data.
+| Data Category | Model | DOI |
+|---------------|-------|-----|
+| Future Climate | Xanthos | <link to DOI dataset> |
+| Post Processing Files | Xanthos Results Processing | <link to DOI dataset> |
 
 #### Example:
 
