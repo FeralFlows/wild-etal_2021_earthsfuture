@@ -20,10 +20,12 @@ Update your journal reference here after acceptance.
 
 ### Input data
 Reference for each minted data source for your input data.
-| Data Category | Model | DOI |
-|---------------|-------|-----|
-| Future Climate | Xanthos | <link to DOI dataset> |
-| Post Processing Files | Xanthos Results Processing | <link to DOI dataset> |
+| Data Category | Model | Directory | DOI |
+|---------------|-------|-----------|-----|
+| Future Climate | Xanthos | xanthos/example/input/climate/ | <link to DOI dataset> |
+| Runoff Module | Xanthos | xanthos/example/input/runoff/ | <link to DOI dataset> |
+| Configuration and Model Run | Xanthos | xanthos/example/ | <link to DOI dataset> |
+| Post Processing R Scripts and Support Files | Xanthos | Your choice. We suggest to create a 'result' folder outside of xanthos model folder | <link to DOI dataset> |
 
 #### Example:
 
