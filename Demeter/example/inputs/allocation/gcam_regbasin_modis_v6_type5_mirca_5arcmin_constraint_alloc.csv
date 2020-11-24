@@ -1,0 +1,3 @@
+category,forest,shrub,grass,urban,snow,sparse,corn_irr,fibercrop_irr,foddergrass_irr,fodderherb_irr,misccrop_irr,oilcrop_irr,othergrain_irr,palmfruit_irr,rice_irr,root_tuber_irr,sugarcrop_irr,wheat_irr,corn_rfd,fibercrop_rfd,foddergrass_rfd,fodderherb_rfd,misccrop_rfd,oilcrop_rfd,othergrain_rfd,palmfruit_rfd,rice_rfd,root_tuber_rfd,sugarcrop_rfd,wheat_rfd,otherarableland,biomass_grass_irr,biomass_grass_rfd,biomass_tree_irr,biomass_tree_rfd
+nutrient_availability,0,0,0,0,0,0,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4
+soil_quality,0,0,0,0,0,0,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2
