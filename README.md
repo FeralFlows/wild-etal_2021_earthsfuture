@@ -17,7 +17,9 @@ Human, I.M. (2020, January 1). human/myrepo: v1.2.5.hydro (Version v1.2.5.hydro)
 Update your journal reference here after acceptance.
 
 ## Contributing models
+
 <p align="center"> <img src="extras/paper_figs/FIG2.PNG"></p>
+
 | Model | Version | Repository Link | DOI |
 |-------|---------|-----------------|-----|
 | Xanthos | <v2.3.1> | <https://github.com/JGCRI/xanthos> | <link to DOI dataset> |
