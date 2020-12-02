@@ -7,7 +7,8 @@
 
 library(ggplot2)
 
-# Argentina: Plot Reference case CO2 emissions and Policy Co2 emissions CO2 emissions.
+# Argentina and Rest of the World
+# Plot Reference case CO2 emissions and Policy Co2 emissions CO2 emissions.
 CO2_Emissions_RefPolicy_Argentina <- read.csv("E:/NEXO-UA/Results/metis/Figure_EmissionsGoalsLine.csv", skip=1) # for Argentina
 CO2_Emissions_RefPolicy_ROW <- read.csv("E:/NEXO-UA/Results/metis/Figure_EmissionsGoalsLine_ROW.csv", skip=1) # for rest of the world
 

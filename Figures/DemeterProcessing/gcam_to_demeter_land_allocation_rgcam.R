@@ -26,7 +26,7 @@ gcam_path <- 'E:/NEXO-UA/GCAM-Workspace/gcam-core_LAC_v02_5Nov2019/output'
 process_path <- 'E:/NEXO-UA/Results/downscaling/land/demeter'
 
 conn <- localDBConn(paste(gcam_path, 'FinalRuns', sep='/'), 'IDBNexus')
-prj <- addScenario(conn, proj=paste(process_path, 'IDBNexus.dat', sep='/'), scenario=c('Reference', 'Impacts', 'Policy'), queryFile=paste(process_path, 'query_demeter_33regions_3scenarios_MZ.xml', sep='/'))
+prj <- addScenario(conn, proj=paste(process_path, 'IDBNexus.dat', sep='/'), scenario=c('Reference', 'Impacts', 'Policy'), queryFile=paste(process_path, 'query_demeter_33regions_3scenarios.xml', sep='/'))
 
 scenarios <- listScenarios(prj)
 
