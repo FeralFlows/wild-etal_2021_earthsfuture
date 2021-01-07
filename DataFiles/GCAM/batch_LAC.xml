@@ -81,10 +81,10 @@ This file must be referenced in the configuration file of interest, with batch r
 		<Value name = "argentina_population_gdp">../input/idb/reference/Argentina_refPop_gSSP2.xml</Value>
 
 		<!--Climate Impacts Files-->
-      <Value name = "hydro">../input/idb/impacts/Hydro/hydro_impacts_HadGEM2-ES_rcp8p5.xml</Value>
-      <Value name = "water">../input/idb/impacts/Water/runoff_impacts_HadGEM2-ES_rcp8p5.xml</Value>
+      <Value name = "hydro">../input/idb/impacts/Hydro/hydro_impacts_MIROC-ESM-CHEM_rcp6p0.xml</Value>
+      <Value name = "water">../input/idb/impacts/Water/runoff_impacts_MIROC-ESM-CHEM_rcp6p0.xml</Value>
       <!--<Value name = "water">../input/idb/impacts/Water/water_cc_hadgem_8p5_exp_wg.xml</Value>-->
-      <Value name = "ag">../input/idb/impacts/Ag/ag_prodchange_HadGEM2-ES_rcp8p5.xml</Value>
+      <Value name = "ag">../input/idb/impacts/Ag/ag_prodchange_MIROC-ESM-CHEM_rcp6p0.xml</Value>
 
 		</FileSet>
 		<FileSet name="Policy">
@@ -125,10 +125,10 @@ This file must be referenced in the configuration file of interest, with batch r
 		<Value name = "argentina_population_gdp">../input/idb/reference/Argentina_refPop_gSSP2.xml</Value>
 
 		<!--Climate Impacts Files-->
-      <Value name = "hydro">../input/idb/impacts/Hydro/hydro_impacts_HadGEM2-ES_rcp8p5.xml</Value>
-      <Value name = "water">../input/idb/impacts/Water/runoff_impacts_HadGEM2-ES_rcp8p5.xml</Value>
+      <Value name = "hydro">../input/idb/impacts/Hydro/hydro_impacts_MIROC-ESM-CHEM_rcp6p0.xml</Value>
+      <Value name = "water">../input/idb/impacts/Water/runoff_impacts_MIROC-ESM-CHEM_rcp6p0.xml</Value>
       <!--<Value name = "water">../input/idb/impacts/Water/water_cc_hadgem_8p5_exp_wg.xml</Value>-->
-      <Value name = "ag">../input/idb/impacts/Ag/ag_prodchange_HadGEM2-ES_rcp8p5.xml</Value>
+      <Value name = "ag">../input/idb/impacts/Ag/ag_prodchange_MIROC-ESM-CHEM_rcp6p0.xml</Value>
 	<!--POLICY FILES-->
 
 	<!--1. Apply constraint to get co2 down to 80%, for purposes of discovering co2 price path required in colombia and globally, to later be applied to non co2s-->

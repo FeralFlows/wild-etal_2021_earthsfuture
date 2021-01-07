@@ -50,12 +50,9 @@ output_files <- list.files(select_output, pattern = '0p5deg', recursive = TRUE, 
 m_basin <- metis::mapGCAMBasins
 m_hydroshed <- metis::mapHydroShed3
 m_country <- metis::mapCountries
-# m_region <- metis::mapGCAMReg32
 
 m_argentina <- m_country[m_country@data$subRegion %in% c("Argentina"),]; sp::plot(m_argentina)
 m_argentina_ext <- m_country[m_country@data$subRegion %in% c("Argentina", 'Chile', 'Bolivia', 'Paraguay', 'Brazil', 'Uruguay'),]; sp::plot(m_argentina_ext)
-# m_chile <- m_country[m_country@data$subRegion %in% c("Chile"),]; sp::plot(m_chile)
-# m_argentina <- m_region[m_region@data$subRegion %in% c("Argentina"),]; sp::plot(m_argentina)
 
 # Basins within Argentina
 m_argentina_basin <- sp::spTransform(m_argentina, raster::crs(m_basin))
@@ -113,6 +110,11 @@ df_boundary <- matrix(data = NA)
 rownames(df_boundary) <- 'A'
 shape_boundary <- sp::SpatialPolygonsDataFrame(shape_boundary, data = as.data.frame(df_boundary))
 
+region <- 'Argentina'
+gcm <- 'MIROC-ESM-CHEM'
+rcp <- 'rcp6p0'
+main_folder <- paste(region, gcm, rcp, sep = '_')
+
 
 #------------------------------- For Demeter -------------------------------#
 #Read Demeter data in paralell####
@@ -158,7 +160,7 @@ df_data_argentina <- df_data %>%
 # and the absolute difference and percent difference between (1) impacts and reference;
 # and (2) policy and reference
 # Note: this plotting may take hours. You may select less crop types in order to reduce run time
-if(F){
+if(T){
   # crop_i <-c('water', 'forest', 'shrub', 'grass',
   #            'urban', 'snow', 'sparse', 'corn_irr',
   #            'fibercrop_irr', 'foddergrass_irr', 'fodderherb_irr', 'misccrop_irr',
@@ -168,27 +170,18 @@ if(F){
   #            'oilcrop_rfd', 'othergrain_rfd', 'palmfruit_rfd', 'rice_rfd',
   #            'root_tuber_rfd', 'sugarcrop_rfd', 'wheat_rfd', 'otherarableland',
   #            'biomass_grass_irr', 'biomass_grass_rfd', 'biomass_tree_irr', 'biomass_tree_rfd')
-  # crop_i <-c('corn_irr',
-  #            'fibercrop_irr', 'foddergrass_irr', 'fodderherb_irr', 'misccrop_irr',
-  #            'oilcrop_irr', 'othergrain_irr', 'palmfruit_irr', 'rice_irr',
-  #            'root_tuber_irr', 'sugarcrop_irr', 'wheat_irr', 'corn_rfd',
-  #            'fibercrop_rfd', 'foddergrass_rfd', 'fodderherb_rfd', 'misccrop_rfd',
-  #            'oilcrop_rfd', 'othergrain_rfd', 'palmfruit_rfd', 'rice_rfd',
-  #            'root_tuber_rfd', 'sugarcrop_rfd', 'wheat_rfd',
-  #            'biomass_grass_irr', 'biomass_grass_rfd', 'biomass_tree_irr', 'biomass_tree_rfd')
-  crop_i <- c('biomass_grass_irr', 'biomass_tree_irr')
-  # # 
-  # crop_i <- c('fibercrop_irr', 'foddergrass_irr', 'fodderherb_irr', 'misccrop_irr',
-  #              'foddergrass_rfd', 'fodderherb_rfd', 'misccrop_rfd',
-  #              'wheat_rfd',
-  #              'biomass_grass_irr', 'biomass_grass_rfd')
-
-  # crop_i <- c('shrub', 'sparse')
-  # crop_i <- c('misccrop_irr', 'fodderherb_irr')
-  region <- 'Argentina'
-  gcm <- 'MIROC-ESM-CHEM'
-  rcp <- 'rcp6p0'
-  main_folder <- paste(region, gcm, rcp, sep = '_')
+  crop_i <-c('corn_irr',
+             'fibercrop_irr', 'foddergrass_irr', 'fodderherb_irr', 'misccrop_irr',
+             'oilcrop_irr', 'othergrain_irr', 'palmfruit_irr', 'rice_irr',
+             'root_tuber_irr', 'sugarcrop_irr', 'wheat_irr', 'corn_rfd',
+             'fibercrop_rfd', 'foddergrass_rfd', 'fodderherb_rfd', 'misccrop_rfd',
+             'oilcrop_rfd', 'othergrain_rfd', 'palmfruit_rfd', 'rice_rfd',
+             'root_tuber_rfd', 'sugarcrop_rfd', 'wheat_rfd',
+             'biomass_grass_irr', 'biomass_grass_rfd', 'biomass_tree_irr', 'biomass_tree_rfd')
+  # crop_i <- c('biomass_grass_rfd', 'biomass_tree_rfd')
+  
+  # crop_i <- c('biomass_grass_irr', 'biomass_tree_irr')
+  
   nameAppend_i <- c('')
   df <- df_data_argentina
   scenario_i <- c('reference', 'impacts', 'policy')
@@ -240,14 +233,24 @@ if(F){
   # regular plot
   poly_table_2 <- poly_table_temp %>%
     tidyr::separate(class, sep = '-', into = c('class', 'scenario', 'x')) %>% 
-    mutate(param = class)
+    mutate(param = class,
+           classPalette = 'pal_green')
   
-  if(F){
+  if(T){
     # aggregate biomass_grass_irr and biomass_tree_irr together
-    poly_table_biomass <- poly_table_2 %>% 
+    poly_table_biomass_irr <- poly_table_2 %>% 
+      filter(class %in% c('biomass_grass_irr', 'biomass_tree_irr')) %>% 
       mutate(class = 'biomass_irr',
-             param = 'biomass_irr') %>% 
-      group_by(aggType, subRegType, scenario, x, subRegion, param, class) %>% 
+             param = 'biomass_irr',) %>% 
+      group_by(aggType, subRegType, scenario, x, subRegion, param, class, classPalette) %>% 
+      summarise(value = sum(value)) %>% 
+      ungroup()
+    
+    poly_table_biomass_rfd <- poly_table_2 %>% 
+      filter(class %in% c('biomass_grass_rfd', 'biomass_tree_rfd')) %>% 
+      mutate(class = 'biomass_rfd',
+             param = 'biomass_rfd') %>% 
+      group_by(aggType, subRegType, scenario, x, subRegion, param, class, classPalette) %>% 
       summarise(value = sum(value)) %>% 
       ungroup()
     
@@ -258,7 +261,7 @@ if(F){
     poly_table_crop$param[grepl('rfd', poly_table_crop$param)] <- 'crop_rfd'
     poly_table_crop$class <- poly_table_crop$param
     poly_table_crop <- poly_table_crop %>% 
-      group_by(aggType, subRegType, scenario, x, subRegion, param, class) %>% 
+      group_by(aggType, subRegType, scenario, x, subRegion, param, class, classPalette) %>% 
       summarise(value = sum(value)) %>% 
       ungroup()
     
@@ -266,97 +269,39 @@ if(F){
     poly_table_crop_all <- poly_table_crop
     poly_table_crop_all[grepl('crop_irr|crop_rfd', poly_table_crop_all)] <- 'crop_all'
     poly_table_crop_all <- poly_table_crop_all %>% 
-      group_by(aggType, subRegType, scenario, x, subRegion, param, class) %>% 
+      group_by(aggType, subRegType, scenario, x, subRegion, param, class, classPalette) %>% 
       summarise(value = sum(value)) %>% 
       ungroup
   }
   
+  poly_table_list <- list(poly_table_biomass_irr, poly_table_biomass_rfd, poly_table_crop, poly_table_crop_all)
   
-  metis.mapsProcess(polygonTable = poly_table_biomass,
-                    subRegShape = shape_ext,
-                    subRegCol = 'subRegion',
-                    subRegType = 'hydroshed',
-                    scenRef = 'reference',
-                    nameAppend = nameAppend_i,
-                    folderName = main_folder,
-                    xRange = year_i,
-                    # scaleRange = data.frame(param = unique(poly_table_2$param), min = c(0,0,0,0), max = c(1,1,1,1)),
-                    mapTitleOn = F,
-                    legendFixedBreaks = 6,
-                    # scaleRange = c(0,1),
-                    # scaleRangeDiffAbs = c(),
-                    boundaryRegShape = shape_boundary,
-                    extendedLabels = T,
-                    cropToBoundary = F,
-                    extension = T,
-                    expandPercent = 25,
-                    classPalette = 'pal_green',
-                    # classPaletteDiff = 'pal_RdBlu',
-                    facetCols = 4,
-                    animateOn = F)
-  
-}
-
-
-if(F){
-  # Plot crop land allocation fraction in group of four crops for years and scenarios
-  # of your choice
-  sp_alloc <- function(args_ls, df, scenario_i, year_i, shape){
-    # browser()
-    class_i <- args_ls[1:4]
-    nameAppend_i <- args_ls[5]
-    
-    data_2 <- df %>% 
-      filter(scenario %in% scenario_i & year %in% year_i & class %in% class_i) %>% 
-      tidyr::unite(class, c(class, scenario, year), sep = '-', remove = TRUE) %>% 
-      dplyr::select(-gridcode); str(data_2)
-    
-    poly_table <- metis.grid2poly(gridFiles = data_2,
-                                  subRegShape = shape,
-                                  aggType = 'depth',
-                                  subRegCol = 'subRegion',
-                                  subRegType = 'hydroshed',
-                                  nameAppend = '_ArgentinaFrac',
-                                  folderName = 'Argentina',
-                                  saveFiles = T)
-    
-    # poly_table_2 <- poly_table %>%
-    #   tidyr::separate(class, sep = '-', into = c('class', 'scenario', 'x')) %>% 
-    #   mutate(param = class)
-    
-    metis.mapsProcess(polygonTable = poly_table,
-                      subRegShape = shape,
+  # Plot all the crop land allocations by crop types
+  for(poly_table_i in poly_table_list){
+    metis.mapsProcess(polygonTable = poly_table_i,
+                      subRegShape = shape_ext,
                       subRegCol = 'subRegion',
                       subRegType = 'hydroshed',
+                      scenRef = 'reference',
                       nameAppend = nameAppend_i,
-                      folderName = 'Argentina',
+                      folderName = main_folder,
+                      xRange = year_i,
                       mapTitleOn = F,
-                      legendFixedBreaks = 9,
+                      legendFixedBreaks = 8,
+                      boundaryRegShape = shape_boundary,
+                      extendedLabels = T,
                       cropToBoundary = F,
                       extension = T,
                       expandPercent = 25,
-                      classPalette = 'pal_green',
-                      facetCols = 8,
+                      # classPalette = 'pal_green',
+                      classPaletteDiff = 'pal_div_BrGn',
+                      facetCols = 4,
                       animateOn = F)
   }
   
   
-  scenario_i <- 'reference'
-  year_i <- c(2020, 2030, 2040, 2050)
-  # class_i <- c('biomass_grass_irr', 'biomass_grass_rfd', 'biomass_tree_irr', 'biomass_tree_rfd')
-  
-  args_ls <- list(C1 = c('water', 'forest', 'shrub', 'grass', '_Group1'),
-                  C2 = c('urban', 'snow', 'sparse', 'corn_irr', '_Group2'),
-                  C3 = c('fibercrop_irr', 'foddergrass_irr', 'fodderherb_irr', 'misccrop_irr', '_Group3'),
-                  C4 = c('oilcrop_irr', 'othergrain_irr', 'palmfruit_irr', 'rice_irr', '_Group4'),
-                  C5 = c('root_tuber_irr', 'sugarcrop_irr', 'wheat_irr', 'corn_rfd', '_Group5'),
-                  C6 = c('fibercrop_rfd', 'foddergrass_rfd', 'fodderherb_rfd', 'misccrop_rfd', '_Group6'),
-                  C7 = c('oilcrop_rfd', 'othergrain_rfd', 'palmfruit_rfd', 'rice_rfd', '_Group7'),
-                  C8 = c('root_tuber_rfd', 'sugarcrop_rfd', 'wheat_rfd', 'otherarableland', '_Group8'),
-                  C9 = c('biomass_grass_irr', 'biomass_grass_rfd', 'biomass_tree_irr', 'biomass_tree_rfd', '_Group9'))
-  
-  lapply(args_ls, sp_alloc, df_data_argentina, scenario_i, year_i, m_argentina_hydroshed)
 }
+
 
 
 # Spatial mapping function for Tethys and Xanthos output in km3
@@ -447,13 +392,8 @@ sp_mapping <- function(gridFiles, subRegShape, subRegShapeExt, boundaryRegShape,
 
 
 #------------------------------- Tethys Output -------------------------------#
-# wdirr_data_reference <- data.table::fread('E:/NEXO-UA/Tethys/example/Output/gcam_5p1_ref_MIROC-ESM-CHEM_rcp6p0_2005-2050_Reference/wdirr_km3peryr.csv', header = TRUE)
-# wdtotal_data_reference <- data.table::fread('E:/NEXO-UA/Tethys/example/Output/gcam_5p1_ref_MIROC-ESM-CHEM_rcp6p0_2005-2050_Reference/wdtotal_km3peryr.csv', header = TRUE)
-# wdtotal_data_impacts <- data.table::fread('E:/NEXO-UA/Tethys/example/Output/gcam_5p1_ref_MIROC-ESM-CHEM_rcp6p0_2005-2050_Impacts/wdtotal_km3peryr.csv', header = TRUE)
-# wdtotal_data_policy <- data.table::fread('E:/NEXO-UA/Tethys/example/Output/gcam_5p1_ref_MIROC-ESM-CHEM_rcp6p0_2005-2050_Policy/wdtotal_km3peryr.csv', header = TRUE)
-# years <- sprintf('%s', seq(from = 2005, to = 2050, by = 5))
 
-
+years <- sprintf('%s', seq(from = 2005, to = 2050, by = 5))
 # Total Water Demand (irrigation, domestic, electricity, livestock, manufacturing, mining, non-ag)
 tethys_mapping <- function(wd_sector, years, boundary, scenario, gcm, rcp){
   tethys_output <- 'E:/NEXO-UA/Tethys/example/Output'
@@ -475,7 +415,7 @@ tethys_mapping <- function(wd_sector, years, boundary, scenario, gcm, rcp){
   
   nameAppend <- paste('_Tethys', scenario, sep = '_')
   
-  demand <- sp_mapping(wdtotal_reference, shape, shape_ext, shape_boundary, 'vol',
+  demand <- sp_mapping(wd_argentina, shape, shape_ext, shape_boundary, 'vol',
                       'subRegion', 'hydroshed', nameAppend, main_folder, years)
   return(demand)
 }
@@ -490,8 +430,6 @@ demand_policy <- tethys_mapping('wdtotal', years, boundary, 'Policy', gcm, rcp)
 # for original Xanthos output
 run <- 'clim_impacts'
 runoff_var_name <- 'q_km3peryear'
-# gcm <- 'MIROC-ESM-CHEM'
-# rcp <- 'rcp6p0'
 time_scale <- '1950_2099'
 
 xanthos_folder <- paste(run, gcm, rcp, sep = '_')
@@ -556,72 +494,7 @@ if(F){
 }
 
 
-if(F){
-  # Aggreagte gridcells to selected polygons
-  poly_table_runoff <- metis.grid2poly(gridFiles = runoff_argentina,
-                                       subRegShape = shape,
-                                       aggType = 'vol', # Xanthos output in km3, so use 'vol' to aggregate
-                                       subRegCol = 'subRegion',
-                                       subRegType = 'hydroshed',
-                                       nameAppend = '_ArgentinaXanthos',
-                                       folderName = 'Argentina',
-                                       saveFiles = T)
-  
-  # Find missing polygons
-  missing <- dplyr::setdiff(shape$subRegion, poly_table$subRegion) %>% 
-    as.data.frame() %>% 
-    rename(subRegion = '.') %>% 
-    left_join(shape_area, by = 'subRegion')
-  if(length(missing$subRegion) > 0){
-    rep <- length(years) * length(missing$subRegion)
-    n_miss <- length(missing$subRegion)
-    missing <- data.frame(subRegion = rep(missing$subRegion, times = length(years)),
-                          value = rep(0, times = rep),
-                          year = rep(years, each = n_miss),
-                          class = rep('class', times = rep),
-                          scenario = rep('scenario', times = rep),
-                          x = paste('X', rep(years, each = n_miss), sep = ''),
-                          param = rep('param', times = rep),
-                          aggType = rep('vol', times = rep),
-                          subRegType = rep('hyroshed', times = rep))
-  }
-  
-  
-  # Add missing polygons and convert unit from volume to depth
-  poly_table_supply <- poly_table_runoff %>% 
-    # dplyr::union(missing) %>% 
-    left_join(shape_area, by = 'subRegion') %>% 
-    # filter(subRegion %in% m_argentina_hydroshed@data$subRegion & !subRegion %in% m_chile_hydroshed$subRegion) %>% 
-    # dplyr::select(subRegion %in% m_chile_hydroshed$subRegion) %>% 
-    mutate(value = (value/area)*1000*1000) # convert from km to mm
-  
-  # Plot maps
-  metis.mapsProcess(polygonTable = poly_table_supply,
-                    subRegShape = shape_ext,
-                    subRegCol = 'subRegion',
-                    subRegType = 'hydroshed',
-                    nameAppend = '_Xanthos',
-                    folderName = 'Argentina',
-                    mapTitleOn = F,
-                    legendFixedBreaks = 7,
-                    # scaleRange = c(0,254),
-                    boundaryRegShape = shape_boundary,
-                    extendedLabels = T,
-                    extension = T,
-                    expandPercent = 25,
-                    cropToBoundary = F,
-                    classPalette = 'pal_wet',
-                    facetCols = 5
-  )
-}
-
-
-
 #------------------------------- Water Scarcity -------------------------------#
-# demand_clean <- demand$shapeTbl %>% 
-#   dplyr::select(-units, -region, -classPalette, -multiFacetCol, -multiFacetRow)
-# supply_clean <- supply$shapeTbl %>% 
-#   dplyr::select(-units, -region, -classPalette, -multiFacetCol, -multiFacetRow)
 
 scarcity_mapping <- function(demand, supply, scenario){
   poly_table_scarcity <- demand %>% 
@@ -657,14 +530,10 @@ scarcity_mapping <- function(demand, supply, scenario){
                     nameAppend = nameAppend,
                     folderName = main_folder,
                     mapTitleOn = F,
-                    # legendFixedBreaks = 4,
-                    # scaleRange = c(0.4, 0),
                     boundaryRegShape = shape_boundary,
                     extendedLabels = T,
                     extension = T,
-                    # expandPercent = 25,
                     cropToBoundary = F,
-                    # classPalette = 'pal_ScarcityCat',
                     facetCols = 5,
                     animateOn = F,
                     numeric2Cat_list = numeric2Cat_list)
@@ -673,17 +542,6 @@ scarcity_mapping <- function(demand, supply, scenario){
 scarcity_mapping(demand_reference, supply, 'Reference')
 scarcity_mapping(demand_impacts, supply, 'Impacts')
 scarcity_mapping(demand_policy, supply, 'Policy')
-
-
-
-# sp_scarcity <- sp::SpatialPointsDataFrame(sp::SpatialPoints(coords = (cbind(datax$lon, 
-#                                                              datax$lat))), data = datax)
-# metis.map(dataPolygon = poly_table_scarcity,
-#           fillColumn = 'subRegion',
-#           shpFile = shape_ext,
-#           fillPalette = 'pal_ScarcityCat',
-#           legendBreaks = c(0,0.1,0.2,0.4),
-#           fileName = 'Argentina_Scarcity')
 
 
 
@@ -703,122 +561,3 @@ df_modis_select <- df_modis %>%
 
 poly_table_modis <- sp_mapping(df_modis_select, shape, shape_ext, shape_boundary, 'vol',
            'subRegion', 'hydroshed', '_DemeterModis', 'Argentina', '2000')
-
-
-
-
-
-#------------------------------- NOT IN USE -------------------------------#
-if(F){
-  
-  basins <- unique(m_argentina_basin@data$subRegion)
-  value_col <- df_data_by_basin %>% 
-    filter(basin_name %in% basins & year %in% 2005 & scenario %in% 'reference') %>% 
-    select(value=corn_irr)
-  
-  
-  data <- data.frame(subRegion = value_col$basin_name,
-                     year = rep(2005, 12),
-                     value = value_col$value)
-  
-  
-  
-  # metis.prepGrid (Fail)
-  # This function is designed to be used with specific open-source downscaling models (Xanthos [18],
-  # Demeter [19], and Tethys [20]) that downscale GCAM data to the grid level. The function takes
-  # outputs from these various models and processes them into the format required for providing
-  # input to the metis.mapsProcess.R function
-  metis.prepGrid(demeterFolders = paste(demeter_output, '/reference_2020-10-05_15h02m50s',sep = ''),
-                 demeterScenarios = 'reference',
-                 demeterTimesteps = seq(from = 2005, to = 2050, by = 5),
-                 demeterUnits = 'fraction',
-                 dirOutputs = paste(getwd(), '/demeter', sep = ''))
-  
-  # metis.grid2poly (Works)
-  # Function used to crop and aggregate gridded data by a given polygon shape file. If no grid is
-  # provided, the function can still be used to produce regional and subregional maps.
-  
-  metis.grid2poly(gridFiles = 'E:/NEXO-UA/Results/metis/outputs/Argentina/Grid2Poly/demeter_test.csv',
-                  subRegShape = m_argentina_hydroshed,
-                  subRegCol = 'subRegion',
-                  subRegType = 'hydrosheds',
-                  aggType = 'depth',
-                  folderName = 'Argentina',
-                  saveFiles = T)
-  
-  data_hydroshed <- data.table::fread('E:/NEXO-UA/Results/metis/outputs/Argentina/Grid2Poly/poly_scenario_hydrosheds_param.csv',
-                                      header = TRUE)
-  
-  str(data_hydroshed)
-  col.names <- c('value', 'forest',
-                 'shrub', 'grass', 'urban', 'snow', 'sparse', 'corn_irr',
-                 'fibercrop_irr', 'foddergrass_irr', 'fodderherb_irr', 'misccrop_irr',
-                 'oilcrop_irr', 'othergrain_irr', 'palmfruit_irr', 'rice_irr',
-                 'root_tuber_irr', 'sugarcrop_irr', 'wheat_irr', 'corn_rfd',
-                 'fibercrop_rfd', 'foddergrass_rfd', 'fodderherb_rfd', 'misccrop_rfd',
-                 'oilcrop_rfd', 'othergrain_rfd', 'palmfruit_rfd', 'rice_rfd',
-                 'root_tuber_rfd', 'sugarcrop_rfd', 'wheat_rfd', 'otherarableland',
-                 'biomass_grass_irr', 'biomass_grass_rfd', 'biomass_tree_irr', 'biomass_tree_rfd')
-  
-  data_hydroshed[, (col.names) := lapply(.SD, as.numeric), .SDcols = col.names]
-  
-  
-  data <- data_hydroshed %>% 
-    group_by(subRegion) %>% 
-    summarise(across(where(is.numeric), ~ sum(.x, na.rm = TRUE))) %>% 
-    ungroup()
-  
-  data <- data.frame(subRegion = as.character(m_argentina_hydroshed$subRegion),
-                     year = rep(2005, length(m_argentina_hydroshed$subRegion)),
-                     value = m_argentina_hydroshed$SUB_AREA)
-  
-  metis.mapsProcess(polygonTable = data_hydroshed,
-                    subRegShape = m_argentina_hydroshed,
-                    folderName = 'Argentina',
-                    subRegCol = 'subRegion',
-                    # subRegType = 'hydrosheds',
-                    mapTitleOn = F,
-                    legendFixedBreaks = 6,
-                    cropToBoundary = F,
-                    extension = T,
-                    expandPercent = 15,
-                    classPalette = 'pal_green')
-  
-  
-  # read basin codes and coordinates
-  basin <- data.table::fread(file = 'basin.csv', header = TRUE); str(basin)
-  basin_names <- data.table::fread(file = 'gcam_basin_lookup.csv', header = TRUE) %>% 
-    rename(basin = basin_id); str(basin_names)
-  coord_5deg <- data.table::fread(file = 'coordinates.csv', header = FALSE) %>% 
-    rename(gridcode = V1,
-           longitude = V2,
-           latitude = V3,
-           x = V4,
-           y = V5) %>% 
-    append(basin) %>% 
-    as.data.frame() %>% 
-    left_join(basin_names, by = 'basin') %>% 
-    select(-x, -y); str(coord_5deg)
-  
-  # assign the basin codes according to the coordinates
-  df_data_2 <- df_data %>% 
-    as_tibble() %>% 
-    gcamdata::left_join_error_no_match(coord_5deg, by = c('gridcode', 'longitude', 'latitude'))
-  
-  df_data_by_basin <- df_data_2 %>% 
-    group_by(scenario, year, basin, basin_name, glu_name) %>% 
-    summarise(across(where(is.numeric), ~ mean(.x, na.rm = TRUE))) %>% 
-    select(-longitude, -latitude, -gridcode)
-  str(df_data_by_basin)
-  
-  # Read in interception of World Basins and 32 region shape file
-  map_inter_basin_32reg <- metis::mapIntersectGCAMBasin32Reg; head(map_inter_basin_32reg@data) 
-  map_inter_basin_32reg <- map_inter_basin_32reg[map_inter_basin_32reg@data$subRegion_GCAMReg32 %in% c("Argentina"),]
-  map_inter_basin_32reg@data <- droplevels(map_inter_basin_32reg@data)
-  metis.map(map_inter_basin_32reg,labels=F) # View custom shape
-  map_inter_basin_32reg@data <- map_inter_basin_32reg@data %>% 
-    dplyr::rename(basins = subRegion_GCAMBasin)
-  str(map_inter_basin_32reg@data)
-  map_inter_basin_32reg@data <- map_inter_basin_32reg@data %>% 
-    dplyr::mutate(subRegion=basins);  map_inter_basin_32reg@data
-}
