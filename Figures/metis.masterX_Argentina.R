@@ -70,18 +70,59 @@ paramsSelect_i <- c('watWithdrawBySec',
                     'landAllocByCrop',
                     'elecByTechTWh',
                     'elecNewCapCost',
-                    'energyPrimaryByFuelEJ'
+                    "elecCapByFuel",
+                    "elecFinalBySecTWh",
+                    "elecFinalByFuelTWh",
+                    "elecNewCapGW",
+                    "elecAnnualRetPrematureCost",
+                    "elecAnnualRetPrematureGW",
+                    "elecCumCapCost",
+                    "elecCumCapGW",
+                    "elecCumRetPrematureCost",
+                    "elecCumRetPrematureGW",
+                    'energyPrimaryByFuelEJ',
+                    "energyPrimaryRefLiqProdEJ",
+                    'energyFinalConsumBySecEJ',
+                    "energyFinalByFuelBySectorEJ",
+                    "energyFinalSubsecByFuelTranspEJ",
+                    "energyFinalSubsecByFuelBuildEJ",
+                    "energyFinalSubsecByFuelIndusEJ",
+                    "energyFinalSubsecBySectorBuildEJ",
+                    'agProdByCrop'
                     )
 
 
-#  queriesSelect_i <- c("land allocation by crop and water source",
-#                       "aggregated land allocation",
-#                       "land allocation by crop")
+if(F){
+  ## If selecting all parameters, switch to if(T)
+  paramesSelect_energy <- c("energyPrimaryByFuelEJ","energyPrimaryRefLiqProdEJ", "energyFinalConsumBySecEJ","energyFinalByFuelBySectorEJ","energyFinalSubsecByFuelTranspEJ", "energyFinalSubsecByFuelBuildEJ", "energyFinalSubsecByFuelIndusEJ","energyFinalSubsecBySectorBuildEJ", "energyPrimaryByFuelMTOE","energyPrimaryRefLiqProdMTOE", "energyFinalConsumBySecMTOE","energyFinalbyFuelMTOE","energyFinalSubsecByFuelTranspMTOE", "energyFinalSubsecByFuelBuildMTOE", "energyFinalSubsecByFuelIndusMTOE","energyFinalSubsecBySectorBuildMTOE", "energyPrimaryByFuelTWh","energyPrimaryRefLiqProdTWh", "energyFinalConsumBySecTWh","energyFinalbyFuelTWh","energyFinalSubsecByFuelTranspTWh", "energyFinalSubsecByFuelBuildTWh", "energyFinalSubsecByFuelIndusTWh","energyFinalSubsecBySectorBuildTWh")
+  
+  paramsSelect_electricity <- c("elecByTechTWh","elecCapByFuel","elecFinalBySecTWh","elecFinalByFuelTWh", "elecNewCapCost","elecNewCapGW","elecAnnualRetPrematureCost","elecAnnualRetPrematureGW","elecCumCapCost","elecCumCapGW","elecCumRetPrematureCost","elecCumRetPrematureGW")
+  
+  paramsSelect_transport <- c( "transportPassengerVMTByMode", "transportFreightVMTByMode", "transportPassengerVMTByFuel", "transportFreightVMTByFuel")
+  
+  paramsSelect_water <- c("watConsumBySec", "watWithdrawBySec", "watWithdrawByCrop", "watBioPhysCons", "watIrrWithdrawBasin","watIrrConsBasin")
+  
+  paramsSelect_socioecon <- c("gdpPerCapita", "gdp", "gdpGrowthRate", "pop")
+  
+  paramsSelect_ag <- c("agProdbyIrrRfd", "agProdBiomass", "agProdForest","agProdByCrop")
+  
+  paramsSelect_livestock <- c("livestock_MeatDairybyTechMixed","livestock_MeatDairybyTechPastoral","livestock_MeatDairybyTechImports", "livestock_MeatDairybySubsector")
+  
+  paramsSelect_land <- c("landIrrRfd", "landIrrCrop","landRfdCrop", "landAlloc","landAllocByCrop")
+  
+  paramsSelect_emissions <- c("emissLUC", "emissNonCO2BySectorGWPAR5","emissNonCO2BySectorGTPAR5","emissNonCO2BySectorOrigUnits", "emissNonCO2ByResProdGWPAR5", "emissBySectorGWPAR5FFI","emissMethaneBySourceGWPAR5", "emissByGasGWPAR5FFI", "emissByGasGWPAR5LUC", "emissBySectorGWPAR5LUC", "emissNonCO2ByResProdGTPAR5", "emissBySectorGTPAR5FFI","emissMethaneBySourceGTPAR5", "emissByGasGTPAR5FFI", "emissByGasGTPAR5LUC","emissBySectorGTPAR5LUC", "emissCO2BySectorNoBio")
+  
+  paramsSelect_all <- c(paramesSelect_energy, paramsSelect_electricity, paramsSelect_transport, paramsSelect_water, paramsSelect_socioecon, paramsSelect_ag, paramsSelect_livestock, paramsSelect_land, paramsSelect_emissions)
+  
+  paramsSelect_i <- paramsSelect_all
+}
+
+
 queriesSelect_i <- c("All")
 
 # Select regions from the 32 GCAM regions.
 # regionsSelect_i <- c("Colombia", "Argentina", "Uruguay")
-regionsSelect_i <- c( "Argentina")
+regionsSelect_i <- c("Argentina")
 
 
 # Reading in the no bio query so it works with Rgcam
