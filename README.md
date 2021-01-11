@@ -13,7 +13,7 @@
 - [Journal Reference](#journal-reference)
 - [Contributing Models](#contributing-models)
 - [Data Reference](#data-reference)
-- [Reproduce My Experiement](#reproduce-my-experiement)
+- [Reproduce My Experiment](#reproduce-my-experiment)
 
 <br />
 
@@ -68,14 +68,14 @@ Update your journal reference here after acceptance.
 <!-------------------------->
 <!-------------------------->
 
-Please note that the models used in this research are the versions labeled in table 1.
+Please note that the models used in this research are the versions labeled in Table 1.
 
 **Table 1:** Model repository and DOI links.
 
 | Model | Version | Repository Link | DOI |
 |:-:|:-:|---|---|
 | Xanthos | <v2.3.1> | <https://github.com/mengqi-z/xanthos/tree/v2.3.1-wild2020-ArgentinaNexus> | <https://doi.org/10.5281/zenodo.4404834> |
-| AgMIP | <version> | <link to code repository> | <DOI link> |
+| pDSSAT | <version> | <link to code repository> | <DOI link> |
 | GCAM | <v5.1.3LAC> | <https://doi.org/10.5281/zenodo.3897519> | <https://doi.org/10.5281/zenodo.3897519> |
 | Tethys | <v1.2.0> | <https://github.com/mengqi-z/tethys/tree/v1.2.0-wild2020-ArgentinaNexus> | <http://doi.org/10.5281/zenodo.4405008> |
 | Demeter | <v1.1.0> | <https://github.com/mengqi-z/demeter/tree/v1.1.0-wild2020-ArgentinaNexus> | <https://doi.org/10.5281/zenodo.4404738> |
@@ -95,7 +95,7 @@ Please note that the models used in this research are the versions labeled in ta
 #### Forcing Data
 In the study of Argentina Energy-Water-Land systems, we selected one climate impact scenario from Global Climate Model (GCM) MIROC-ESM-CHEM forced by Representative Concentration Pathway (RCP) 6.0. The source of climate data for Xanthos is obtained from ISIMIP Fast Track Dataset (citation). Input data for GCAM, Demeter, and Tethys are outputs from their feeding models described in Figure 1. Generally, those outputs need to be post-processed to required formats in order to feed into other models as inputs. We provide R scripts in section [Reproduce My Experiment](#reproduce-my-experiment) for reproducing the post-processed input data.
 
-For broader use of these data, we also provide post-processed input dataset directly (See DOI link in table 2). These data includes all 20 combinations of GCM/RCP scenarios. There are 5 GCMs (i.e., GFDL-ESM2M, HadGEM2-ES, IPSL-CM5A-LR, MIROC-ESM-CHEM, and NorESM1-M) and 4 RCPs (i.e., rcp2.6, rcp4.5, rcp6.0, and rcp8.5).
+For broader use of these data, we also provide post-processed input dataset directly (See DOI link in Table 2). These data includes all 20 combinations of GCM/RCP scenarios. There are 5 GCMs (i.e., GFDL-ESM2M, HadGEM2-ES, IPSL-CM5A-LR, MIROC-ESM-CHEM, and NorESM1-M) and 4 RCPs (i.e., rcp2.6, rcp4.5, rcp6.0, and rcp8.5).
 
 **Table 2:** Input data for each model and DOI links.
 
@@ -107,7 +107,7 @@ For broader use of these data, we also provide post-processed input dataset dire
 | GCAM database | Tethys | <http://doi.org/10.5281/zenodo.4420154> | [basex files] created from GCAM runs by GCM. Each GCM run includes 8 combinations from 4 rcps and 2 scenarios (i.e., Climate Impacts scenario and Policy scenario) |
 
 #### Files Replaced for Argentina Study
-For the Argentina study, we replaced default files of each model with modified files we provide in table 3. For configuration and model run files, you will need to modify the directories based on the location of your models. More detailed summary of data and files can be found in [File Replacement Record](https://).
+For the Argentina study, we replaced default files of each model with modified files we provide in Table 3. For configuration and model run files, you will need to modify the directories based on the location of your models. More detailed summary of data and files can be found in [File Replacement Record](https://).
 
 **Table 3:** Files replaced for model modifications in the Argentina Nexus study.
 
@@ -151,7 +151,15 @@ For broader use, we provide output dataset from model runs with all 20 combinati
 
 ### 1. Run Preparation
 
+This experiment is conducted under Windows 64-bit operating system.
+
 #### (A) Argentina Nexus Repository
+
+  * This repository uses the Git Large File Storage (LFS) extension (see https://git-lfs.github.com/ for details). Please run the following command before cloning if you do not already have Git LFS installed:
+  
+  ```
+  git lfs install
+  ```
 
   * Clone ArgentinaNexus reproducible repository into your desired location.
 
@@ -204,7 +212,7 @@ For broader use, we provide output dataset from model runs with all 20 combinati
   ```
   git clone https://github.com/mengqi-z/tethys.git
   ```
-  * Optional: Install PyCharm Professional version https://www.jetbrains.com/pycharm/download/#section=windows
+  * (Optional) Install PyCharm Professional version https://www.jetbrains.com/pycharm/download/#section=windows
   * Install Python 2.7 and Python 3.8 https://www.python.org/downloads/
   
 **Notes:* We will refer all the model folders to 'xanthos/', 'demeter/', and 'tethys/' in the following instructions. If you choose to download models directly from provided DOI links instead of cloning, please change each of the downloaded folder name to 'xanthos', 'demeter', and 'tethys'.
@@ -278,7 +286,7 @@ To process Xanthos outputs for GCAM:
   * One quick way to check GCAM output database is to use GCAM ModelInterface. Go to gcam-core_LAC_v02_5Nov2019/ModelInterface, double click 'run-model-interface.bat'. For more instruction on using ModelInterface, please refer to [GCAM Documentation](https://github.com/JGCRI/gcam-core).
   
 ***Tethys***
-  * GCAM output database is the input data for Tethys. Copy and paste 'IDBNexus' folder under gcam-core_LAC_v02_5Nov2019/otuput/FinalRuns to tethys/example/Input/GCAM.
+  * GCAM output database is the input data for Tethys. Copy and paste 'IDBNexus' folder under gcam-core_LAC_v02_5Nov2019/output/FinalRuns to tethys/example/Input/GCAM.
   * Change the name for parameter 'GCAM-DBfile' in the configuration file (tethys/example/config.ini) to your pasted folder name 'IDBNexus'.
   * Change the name for parameter 'ProjectName' in config.ini to the name you prefer for the folder holding the outputs. For example, 'gcam_5p1_IDBNexus'.
   * In the terminal, run Tethys by navigating to tethys/example, and run
@@ -294,7 +302,7 @@ To process Xanthos outputs for GCAM:
   ```
   python example_LAC.py
   ```
-  * The cell resolution for Demeter output is 5 arcmin (0.0833 degree). Aggregate output from 5 arcmin to 0.5 degree by running R script aggregate_5arcmin_to_0p5degree.py (see Table 6). Remember to change all the directories in this python file according to your data location. Then, run the python script in the terminal by navigating to ArgentinaNexus/Figures/DemeterProcessing and run
+  * The cell resolution for Demeter output is 5 arcmin (0.0833 degree). Aggregate output from 5 arcmin to 0.5 degree by running R script 'aggregate_5arcmin_to_0p5degree.py' (see Table 6). Remember to change all the directories in this python file according to your data location. Then, run the python script in the terminal by navigating to ArgentinaNexus/Figures/DemeterProcessing and run
   ```
   python aggregate_5arcmin_to_0p5degree.py
   ```
@@ -312,7 +320,7 @@ To process Xanthos outputs for GCAM:
 <br />
 
 ### 3. Reproduce Figures
-We also provide scripts (ArgentinaNexus/Figures/) for reproducing figures in our paper. Before running each script, make sure you have change all the directories according to your data and file locations.
+We also provide scripts (ArgentinaNexus/Figures/) for reproducing figures in our paper. Before running each script, make sure you have changed all the directories according to your data and file locations. You can change your desired output locations in the scripts.
 
 **Table 7:** R scripts for producing figures from the paper.
 
@@ -324,6 +332,6 @@ We also provide scripts (ArgentinaNexus/Figures/) for reproducing figures in our
 | EmissionGoalLine_Plot.R | Figure 5 |
 | metis.masterX_Argentina.R | Figure 6 |
 | metis_plot_argentina.R | Figure 7 - 10 |
-|
+
 
 [Back to Top](#argentinanexus)
