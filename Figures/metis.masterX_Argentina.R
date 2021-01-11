@@ -63,36 +63,36 @@ scenNewNames_i = c("Reference", "Climate Impacts", "Climate Policy") # "Original
 paramsList <-  metis.mappings()$mapParamQuery
 # paramsSelect_i <- c('aggLandAlloc')
 # paramsSelect_i <- c('watWithdrawBySec')
-paramsSelect_i <- c('watWithdrawBySec',
-                    'watWithdrawByCrop',
-                    'watIrrWithdrawBasin',
-                    'landAlloc',
-                    'landAllocByCrop',
-                    'elecByTechTWh',
-                    'elecNewCapCost',
-                    "elecCapByFuel",
-                    "elecFinalBySecTWh",
-                    "elecFinalByFuelTWh",
-                    "elecNewCapGW",
-                    "elecAnnualRetPrematureCost",
-                    "elecAnnualRetPrematureGW",
-                    "elecCumCapCost",
-                    "elecCumCapGW",
-                    "elecCumRetPrematureCost",
-                    "elecCumRetPrematureGW",
-                    'energyPrimaryByFuelEJ',
-                    "energyPrimaryRefLiqProdEJ",
-                    'energyFinalConsumBySecEJ',
-                    "energyFinalByFuelBySectorEJ",
-                    "energyFinalSubsecByFuelTranspEJ",
-                    "energyFinalSubsecByFuelBuildEJ",
-                    "energyFinalSubsecByFuelIndusEJ",
-                    "energyFinalSubsecBySectorBuildEJ",
-                    'agProdByCrop'
-                    )
+# paramsSelect_i <- c('watWithdrawBySec',
+#                     'watWithdrawByCrop',
+#                     'watIrrWithdrawBasin',
+#                     'landAlloc',
+#                     'landAllocByCrop',
+#                     'elecByTechTWh',
+#                     'elecNewCapCost',
+#                     "elecCapByFuel",
+#                     "elecFinalBySecTWh",
+#                     "elecFinalByFuelTWh",
+#                     "elecNewCapGW",
+#                     "elecAnnualRetPrematureCost",
+#                     "elecAnnualRetPrematureGW",
+#                     "elecCumCapCost",
+#                     "elecCumCapGW",
+#                     "elecCumRetPrematureCost",
+#                     "elecCumRetPrematureGW",
+#                     'energyPrimaryByFuelEJ',
+#                     "energyPrimaryRefLiqProdEJ",
+#                     'energyFinalConsumBySecEJ',
+#                     "energyFinalByFuelBySectorEJ",
+#                     "energyFinalSubsecByFuelTranspEJ",
+#                     "energyFinalSubsecByFuelBuildEJ",
+#                     "energyFinalSubsecByFuelIndusEJ",
+#                     "energyFinalSubsecBySectorBuildEJ",
+#                     'agProdByCrop'
+#                     )
 
 
-if(F){
+if(T){
   ## If selecting all parameters, switch to if(T)
   paramesSelect_energy <- c("energyPrimaryByFuelEJ","energyPrimaryRefLiqProdEJ", "energyFinalConsumBySecEJ","energyFinalByFuelBySectorEJ","energyFinalSubsecByFuelTranspEJ", "energyFinalSubsecByFuelBuildEJ", "energyFinalSubsecByFuelIndusEJ","energyFinalSubsecBySectorBuildEJ", "energyPrimaryByFuelMTOE","energyPrimaryRefLiqProdMTOE", "energyFinalConsumBySecMTOE","energyFinalbyFuelMTOE","energyFinalSubsecByFuelTranspMTOE", "energyFinalSubsecByFuelBuildMTOE", "energyFinalSubsecByFuelIndusMTOE","energyFinalSubsecBySectorBuildMTOE", "energyPrimaryByFuelTWh","energyPrimaryRefLiqProdTWh", "energyFinalConsumBySecTWh","energyFinalbyFuelTWh","energyFinalSubsecByFuelTranspTWh", "energyFinalSubsecByFuelBuildTWh", "energyFinalSubsecByFuelIndusTWh","energyFinalSubsecBySectorBuildTWh")
   
@@ -123,6 +123,7 @@ queriesSelect_i <- c("All")
 # Select regions from the 32 GCAM regions.
 # regionsSelect_i <- c("Colombia", "Argentina", "Uruguay")
 regionsSelect_i <- c("Argentina")
+# regionsSelect_i <- c("Colombia")
 
 
 # Reading in the no bio query so it works with Rgcam
@@ -215,63 +216,4 @@ charts <- metis.chartsProcess(rTable = rTable_i, # Default is NULL
                               pdfpng = 'pdf',
                               # plotBGcolor = 'white',
                               multiPlotFigsOnly = T) # Default 0. If set to 1, will only run comparison plots and not individual
-
-
-
-
-# Argentina: Plot Reference case CO2 emissions and Policy Co2 emissions CO2 emissions.
-CO2_Emissions_RefPolicy <- read.csv("E:/NEXO-UA/Results/metis/Figure_EmissionsGoalsLine.csv", skip=1)
-CO2_Emissions_RefPolicy <- CO2_Emissions_RefPolicy %>%
-  gather(Scenario, value, Reference:Policy)
-p <- ggplot(data = CO2_Emissions_RefPolicy %>% filter(!Scenario=='NDC'), mapping = aes(x = year, y = value, color = Scenario, fill=Scenario))
-p <- p + scale_color_manual(values=c("#1bab55", "black"))
-p <- p + ylim(0,300)
-p <- p + ylab(expression(CO[2]~Emissions~(10^6~tons)))
-p <- p + xlab('Year')
-p <- p + geom_line(size=1)
-p <- p + theme(text = element_text(size=12), axis.text.x = element_text(size=12))
-p <- p + theme_bw()
-dirOutputs <- 'E:/NEXO-UA/Results/metis/outputs'
-fname <- 'Figure_emissCO2_RefPolicyCompare'
-pdfpng <- 'pdf'
-figWidth <- 4
-figHeight <- 3
-p
-metis.printPdfPng(figure=p,
-                  dir=dirOutputs,
-                  filename=fname,
-                  figWidth=figWidth,
-                  figHeight=figHeight,
-                  pdfpng=pdfpng)
-
-if(F){
-  #************************* NOT IN USE ******************************#
-  
-  # Colombia: Plot reference case CO2 emissions and Policy Co2 emissions CO2 emissions.
-  CO2_Emissions_RefPolicy <- read.csv("//essi12.umd.edu/documents/twild/Documents/Publications/2019/Wild et al. (2019) - Climatic Change - Colombia energy-water-land/Figures/Figure_EmissionsGoalsLine/Figure_EmissionsGoalsLine.csv", skip=1)
-  CO2_Emissions_RefPolicy <- CO2_Emissions_RefPolicy %>%
-    gather(Scenario, value, Reference:Policy)
-  p <- ggplot(data = CO2_Emissions_RefPolicy %>% filter(!Scenario=='NDC'), mapping = aes(x = year, y = value, color = Scenario, fill=Scenario))
-  p <- p + scale_color_manual(values=c("#1bab55", "black"))
-  p <- p + ylim(0,200)
-  p <- p + ylab(expression(CO[2]~Emissions~(10^6~tons)))
-  p <- p + xlab('Year')
-  p <- p + geom_line(size=1)
-  p <- p + theme(text = element_text(size=12), axis.text.x = element_text(size=12))
-  p <- p + theme_bw()
-  dirOutputs <- '//essi12.umd.edu/documents/twild/Documents/Publications/2019/Wild et al. (2019) - Climatic Change - Colombia energy-water-land/Figures/Figure_EmissionsGoalsLine'
-  fname <- 'Figure_emissCO2_RefPolicyCompare'
-  pdfpng <- 'pdf'
-  figWidth <- 4
-  figHeight <- 3
-  p
-  metis.printPdfPng(figure=p,
-                    dir=dirOutputs,
-                    filename=fname,
-                    figWidth=figWidth,
-                    figHeight=figHeight,
-                    pdfpng=pdfpng)
-  
-
-}
 
