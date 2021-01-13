@@ -191,7 +191,8 @@ This experiment is conducted under Windows 64-bit operating system.
 
   * Replace gcam-core_LAC_v02_5Nov2019/exe/configuration_LAC.xml with ArgentinaNexus/DataFiles/GCAM/configuration_LAC.xml in the cloned ArgentinaNexus repository
   * Replace gcam-core_LAC_v02_5Nov2019/exe/batch_LAC.xml with ArgentinaNexus/DataFiles/GCAM/batch_LAC.xml
-  * Optional: Replace folders 'Ag', 'Hydro', and 'Water' within directory gcam-core_LAC_v02_5Nov2019/input/idb/impacts/ with same folders within downloaded 'GCAM_input_idb_impacts.zip'. You may also produce those files within 'Water' and 'Hydro' from Xanthos run and post-processing R script.
+  * Replace folder 'Ag' within directory gcam-core_LAC_v02_5Nov2019/input/idb/impacts/ with same folder from downloaded 'GCAM_input_idb_impacts.zip'.
+  * (Optional) Replace folders 'Hydro' and 'Water' within directory gcam-core_LAC_v02_5Nov2019/input/idb/impacts/ with same folder from downloaded 'GCAM_input_idb_impacts.zip'. You may also reproduce those XML files within 'Water' and 'Hydro' from Xanthos run and post-processing R script.
   
 **Notes:* GCAM v5.1.3-LAC is a modified version from GCAM-Core-v5.1.3 for the study in Latin America and the Caribbean (LAC) Region. A 64-bit Java is required to run GCAM. We recommend the open source version of Java ([OpenJDK](http://openjdk.java.net/)). More details on GCAM installation, setting up, and trouble shooting, please refer to [GCAM Documentation](https://github.com/JGCRI/gcam-core).
 
@@ -200,17 +201,20 @@ This experiment is conducted under Windows 64-bit operating system.
 
 ***Pre-requirements***
 
-  * Download Xanthos directly from https://doi.org/10.5281/zenodo.4404834, or clone Xanthos to your desired location
+  * Download Xanthos directly from https://doi.org/10.5281/zenodo.4404834, or clone Xanthos to your desired location and checkout the correct branch 'v2.3.1-wild2020-ArgentinaNexus'
   ```
   git clone https://github.com/mengqi-z/xanthos.git
+  git checkout v2.3.1-wild2020-ArgentinaNexus
   ```
-  * Download Demeter directly from https://doi.org/10.5281/zenodo.4404738, or clone Demeter to your desired location
+  * Download Demeter directly from https://doi.org/10.5281/zenodo.4404738, or clone Demeter to your desired location and checkout the correct branch 'v1.1.0-wild2020-ArgentinaNexus'
   ```
   git clone https://github.com/mengqi-z/demeter.git
+  git checkout v1.1.0-wild2020-ArgentinaNexus
   ```
-  * Download Tethys directly http://doi.org/10.5281/zenodo.4405008, or clone Tethys to your desired location
+  * Download Tethys directly http://doi.org/10.5281/zenodo.4405008, or clone Tethys to your desired location and checkout the correct branch 'v1.2.0-wild2020-ArgentinaNexus' 
   ```
   git clone https://github.com/mengqi-z/tethys.git
+  git checkout v1.2.0-wild2020-ArgentinaNexus
   ```
   * (Optional) Install PyCharm Professional version https://www.jetbrains.com/pycharm/download/#section=windows
   * Install Python 2.7 and Python 3.8 https://www.python.org/downloads/
@@ -242,7 +246,7 @@ Check each file listed in Table 5 and modify every directory within those files 
 |---|:-:|---|
 | Xanthos | Python 3.3+ | under xanthos/example: <br /> (1) pm_abcd_mrtm_future_impacts.ini <br /> (2) future_sim_IDBFinalRuns.py <br /> (3) watch_impacts.ini <br /> (4) watch_wfdei_sim.py |
 | Demeter | Python 2.7 | under demeter/example: <br /> (1) config_LAC.ini <br /> (2) example_LAC.py |
-| Tethys | Python 3+ | under tethys/example: <br /> (1) config.ini <br /> (2) example.py |
+| Tethys | Python 3+ | under tethys/example: <br /> (1) config.ini |
 
 
 <br />
@@ -281,7 +285,8 @@ To process Xanthos outputs for GCAM:
   * Post-processing Xanthos hydropower output by running R script 'hydro_analysis_plotting.R' listed in Table 6. This will create same XML files with the downloaded ones within GCAM_input_idb_impacts/Hydro. You may replace corresponding XML files in gcam-core_LAC_v02_5Nov2019/input/idb/impacts/Hydro if you haven't done so.
   
 ***GCAM LAC***
-  * Run GCAM by going to gcam-core_LAC_v02_5Nov2019/exe and double click 'run-gcam.bat' to run the model.
+  * Go to gcam-core_LAC_v02_5Nov2019/exe and open 'run-gcam.bat' in a text editor. Change the Run GCAM line to point to configuration_LAC.xml: ```Objects-Main.exe - C configuration_LAC.xml```.
+  * Run GCAM by double clicking 'run-gcam.bat' to run the model.
   * Check GCAM output database located in gcam-core_LAC_v02_5Nov2019/output/FinalRuns/IDBNexus.
   * One quick way to check GCAM output database is to use GCAM ModelInterface. Go to gcam-core_LAC_v02_5Nov2019/ModelInterface, double click 'run-model-interface.bat'. For more instruction on using ModelInterface, please refer to [GCAM Documentation](https://github.com/JGCRI/gcam-core).
   
