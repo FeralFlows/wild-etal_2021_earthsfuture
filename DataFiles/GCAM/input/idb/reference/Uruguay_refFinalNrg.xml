@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scenario>
+    <world>
+        <region name="Uruguay">
+ <energy-final-demand name="industry">
+<income-elasticity year='2015'>0.918</income-elasticity>
+<income-elasticity year='2020'>0.8772</income-elasticity>
+<income-elasticity year='2025'>0.8196</income-elasticity>
+<income-elasticity year='2030'>0.7608</income-elasticity>
+<income-elasticity year='2035'>0.6972</income-elasticity>
+<income-elasticity year='2040'>0.6312</income-elasticity>
+<income-elasticity year='2045'>0.5652</income-elasticity>
+<income-elasticity year='2050'>0.4992</income-elasticity>
+<income-elasticity year='2055'>0.4296</income-elasticity>
+<income-elasticity year='2060'>0.3996</income-elasticity>
+<income-elasticity year='2065'>0.3768</income-elasticity>
+<income-elasticity year='2070'>0.354</income-elasticity>
+<income-elasticity year='2075'>0.33</income-elasticity>
+<income-elasticity year='2080'>0.3108</income-elasticity>
+<income-elasticity year='2085'>0.306</income-elasticity>
+<income-elasticity year='2090'>0.3012</income-elasticity>
+<income-elasticity year='2095'>0.2952</income-elasticity>
+<income-elasticity year='2100'>0.2904</income-elasticity>
+            </energy-final-demand>
+ <energy-final-demand name="cement">
+<income-elasticity year='2015'>1.0632</income-elasticity>
+<income-elasticity year='2020'>0.9264</income-elasticity>
+<income-elasticity year='2025'>0.7524</income-elasticity>
+<income-elasticity year='2030'>0.6552</income-elasticity>
+<income-elasticity year='2035'>0.576</income-elasticity>
+<income-elasticity year='2040'>0.4992</income-elasticity>
+<income-elasticity year='2045'>0.426</income-elasticity>
+<income-elasticity year='2050'>0.3768</income-elasticity>
+<income-elasticity year='2055'>0.3348</income-elasticity>
+<income-elasticity year='2060'>0.2952</income-elasticity>
+<income-elasticity year='2065'>0.2592</income-elasticity>
+<income-elasticity year='2070'>0.2256</income-elasticity>
+<income-elasticity year='2075'>0.1884</income-elasticity>
+<income-elasticity year='2080'>0.1536</income-elasticity>
+<income-elasticity year='2085'>0.1236</income-elasticity>
+<income-elasticity year='2090'>0.0996</income-elasticity>
+<income-elasticity year='2095'>0.0804</income-elasticity>
+<income-elasticity year='2100'>0.0636</income-elasticity>
+            </energy-final-demand>
+			<energy-final-demand name="building">
+<income-elasticity year='2015'>0.000738</income-elasticity>
+<income-elasticity year='2020'>0.000711</income-elasticity>
+<income-elasticity year='2025'>0.00068</income-elasticity>
+<income-elasticity year='2030'>0.000648</income-elasticity>
+<income-elasticity year='2035'>0.000611</income-elasticity>
+<income-elasticity year='2040'>0.000567</income-elasticity>
+<income-elasticity year='2045'>0.000515</income-elasticity>
+<income-elasticity year='2050'>0.000454</income-elasticity>
+<income-elasticity year='2055'>0.000381</income-elasticity>
+<income-elasticity year='2060'>0.000315</income-elasticity>
+<income-elasticity year='2065'>0.000242</income-elasticity>
+<income-elasticity year='2070'>0.000161</income-elasticity>
+<income-elasticity year='2075'>0.000078</income-elasticity>
+<income-elasticity year='2080'>0.000078</income-elasticity>
+<income-elasticity year='2085'>0.000078</income-elasticity>
+<income-elasticity year='2090'>0.000078</income-elasticity>
+<income-elasticity year='2095'>0.000078</income-elasticity>
+<income-elasticity year='2100'>0.000078</income-elasticity>
+            </energy-final-demand>
+ <energy-final-demand name="trn_pass">
+<income-elasticity year='2015'>2</income-elasticity>
+<income-elasticity year='2020'>2</income-elasticity>
+<income-elasticity year='2025'>2</income-elasticity>
+<income-elasticity year='2030'>2</income-elasticity>
+<income-elasticity year='2035'>2</income-elasticity>
+<income-elasticity year='2040'>2</income-elasticity>
+<income-elasticity year='2045'>2</income-elasticity>
+<income-elasticity year='2050'>2</income-elasticity>
+<income-elasticity year='2055'>2</income-elasticity>
+<income-elasticity year='2060'>2</income-elasticity>
+<income-elasticity year='2065'>2</income-elasticity>
+<income-elasticity year='2070'>2</income-elasticity>
+<income-elasticity year='2075'>2</income-elasticity>
+<income-elasticity year='2080'>2</income-elasticity>
+<income-elasticity year='2085'>2</income-elasticity>
+<income-elasticity year='2090'>2</income-elasticity>
+<income-elasticity year='2095'>2</income-elasticity>
+<income-elasticity year='2100'>2</income-elasticity>
+            </energy-final-demand>
+ <energy-final-demand name="trn_freight">
+<income-elasticity year='2015'>1.5</income-elasticity>
+<income-elasticity year='2020'>1.5</income-elasticity>
+<income-elasticity year='2025'>1.5</income-elasticity>
+<income-elasticity year='2030'>1.5</income-elasticity>
+<income-elasticity year='2035'>1.5</income-elasticity>
+<income-elasticity year='2040'>1.5</income-elasticity>
+<income-elasticity year='2045'>1.5</income-elasticity>
+<income-elasticity year='2050'>1.5</income-elasticity>
+<income-elasticity year='2055'>1.5</income-elasticity>
+<income-elasticity year='2060'>1.5</income-elasticity>
+<income-elasticity year='2065'>1.5</income-elasticity>
+<income-elasticity year='2070'>1.5</income-elasticity>
+<income-elasticity year='2075'>1.5</income-elasticity>
+<income-elasticity year='2080'>1.5</income-elasticity>
+<income-elasticity year='2085'>1.5</income-elasticity>
+<income-elasticity year='2090'>1.5</income-elasticity>
+<income-elasticity year='2095'>1.5</income-elasticity>
+<income-elasticity year='2100'>1.5</income-elasticity>
+            </energy-final-demand>
+ <energy-final-demand name="trn_aviation_intl">
+<income-elasticity year='2015'>2</income-elasticity>
+<income-elasticity year='2020'>2</income-elasticity>
+<income-elasticity year='2025'>2</income-elasticity>
+<income-elasticity year='2030'>2</income-elasticity>
+<income-elasticity year='2035'>2</income-elasticity>
+<income-elasticity year='2040'>2</income-elasticity>
+<income-elasticity year='2045'>2</income-elasticity>
+<income-elasticity year='2050'>2</income-elasticity>
+<income-elasticity year='2055'>2</income-elasticity>
+<income-elasticity year='2060'>2</income-elasticity>
+<income-elasticity year='2065'>2</income-elasticity>
+<income-elasticity year='2070'>2</income-elasticity>
+<income-elasticity year='2075'>2</income-elasticity>
+<income-elasticity year='2080'>2</income-elasticity>
+<income-elasticity year='2085'>2</income-elasticity>
+<income-elasticity year='2090'>2</income-elasticity>
+<income-elasticity year='2095'>2</income-elasticity>
+<income-elasticity year='2100'>2</income-elasticity>
+            </energy-final-demand>
+ <energy-final-demand name="trn_shipping_intl">
+<income-elasticity year='2015'>0.8</income-elasticity>
+<income-elasticity year='2020'>0.8</income-elasticity>
+<income-elasticity year='2025'>0.8</income-elasticity>
+<income-elasticity year='2030'>0.8</income-elasticity>
+<income-elasticity year='2035'>0.8</income-elasticity>
+<income-elasticity year='2040'>0.8</income-elasticity>
+<income-elasticity year='2045'>0.8</income-elasticity>
+<income-elasticity year='2050'>0.8</income-elasticity>
+<income-elasticity year='2055'>0.8</income-elasticity>
+<income-elasticity year='2060'>0.8</income-elasticity>
+<income-elasticity year='2065'>0.8</income-elasticity>
+<income-elasticity year='2070'>0.8</income-elasticity>
+<income-elasticity year='2075'>0.8</income-elasticity>
+<income-elasticity year='2080'>0.8</income-elasticity>
+<income-elasticity year='2085'>0.8</income-elasticity>
+<income-elasticity year='2090'>0.8</income-elasticity>
+<income-elasticity year='2095'>0.8</income-elasticity>
+<income-elasticity year='2100'>0.8</income-elasticity>
+            </energy-final-demand>
+ <supplysector name="industrial energy use">
+                <subsector name="electricity">
+                  <interpolation-rule apply-to="share-weight" delete="1" 
+                  from-year="2010" to-year="2015">
+                   <to-value>5</to-value>
+                  <interpolation-function name="linear"/>
+                  </interpolation-rule>
+                    <share-weight year="2015">5</share-weight>
+					<share-weight year="2020">5</share-weight>
+					<share-weight year="2025">5</share-weight>
+					<share-weight year="2030">5</share-weight>
+					<share-weight year="2035">5</share-weight>
+					<share-weight year="2040">5</share-weight>
+					<share-weight year="2045">5</share-weight>
+					<share-weight year="2050">5</share-weight>
+                	<share-weight year="2055">5</share-weight>
+                    <share-weight year="2060">5</share-weight>
+                    <share-weight year="2065">5</share-weight>
+                    <share-weight year="2070">5</share-weight>
+                    <share-weight year="2075">5</share-weight>
+                    <share-weight year="2080">5</share-weight>
+                    <share-weight year="2085">5</share-weight>
+                    <share-weight year="2090">5</share-weight>
+					<share-weight year="2095">5</share-weight>
+                    <share-weight year="2100">5</share-weight>
+                </subsector>
+            <subsector name="refined liquids">
+                  <interpolation-rule apply-to="share-weight" delete="1" 
+                  from-year="2010" to-year="2015">
+                 <to-value>0.942</to-value>
+                  <interpolation-function name="linear"/>
+                  </interpolation-rule>
+                    <share-weight year="2015">0.942</share-weight>
+					<share-weight year="2020">0.942</share-weight>
+					<share-weight year="2025">0.942</share-weight>
+					<share-weight year="2030">0.942</share-weight>
+					<share-weight year="2035">0.942</share-weight>
+					<share-weight year="2040">0.942</share-weight>
+					<share-weight year="2045">0.942</share-weight>
+					<share-weight year="2050">0.942</share-weight>
+					<share-weight year="2055">0.942</share-weight>
+                    <share-weight year="2060">0.942</share-weight>
+                    <share-weight year="2065">0.942</share-weight>
+                    <share-weight year="2070">0.942</share-weight>
+                    <share-weight year="2075">0.942</share-weight>
+                    <share-weight year="2080">0.942</share-weight>
+                    <share-weight year="2085">0.942</share-weight>
+                    <share-weight year="2090">0.942</share-weight>
+					<share-weight year="2095">0.942</share-weight>
+                    <share-weight year="2100">0.942</share-weight>
+                </subsector>
+				            <subsector name="biomass">
+                  <interpolation-rule apply-to="share-weight" delete="1" 
+                  from-year="2010" to-year="2015">
+                 <to-value>1.5</to-value>
+                  <interpolation-function name="linear"/>
+                  </interpolation-rule>
+                    <share-weight year="2015">1.5</share-weight>
+					<share-weight year="2020">1.5</share-weight>
+					<share-weight year="2025">1.5</share-weight>
+					<share-weight year="2030">1.5</share-weight>
+					<share-weight year="2035">1.5</share-weight>
+					<share-weight year="2040">1.5</share-weight>
+					<share-weight year="2045">1.5</share-weight>
+					<share-weight year="2050">1.5</share-weight>
+					<share-weight year="2055">1.5</share-weight>
+                    <share-weight year="2060">1.5</share-weight>
+                    <share-weight year="2065">1.5</share-weight>
+                    <share-weight year="2070">1.5</share-weight>
+                    <share-weight year="2075">1.5</share-weight>
+                    <share-weight year="2080">1.5</share-weight>
+                    <share-weight year="2085">1.5</share-weight>
+                    <share-weight year="2090">1.5</share-weight>
+					<share-weight year="2095">1.5</share-weight>
+                    <share-weight year="2100">1.5</share-weight>
+                </subsector>
+            </supplysector>
+<supplysector name="comm cooling">
+                <keyword final-energy="building"/>
+				<subsector name="electricity">
+    					<interpolation-rule apply-to="share-weight"  delete="1"
+                        from-year="2010" to-year="2015">
+                         <to-value>0.5</to-value>
+                        <interpolation-function name="linear"/>
+                    	</interpolation-rule>
+                    <share-weight year="2015">0.5</share-weight>
+					<share-weight year="2020">0.5</share-weight>
+					<share-weight year="2025">0.5</share-weight>
+					<share-weight year="2030">0.5</share-weight>
+					<share-weight year="2035">0.5</share-weight>
+					<share-weight year="2040">0.5</share-weight>
+					<share-weight year="2045">0.5</share-weight>
+					<share-weight year="2050">0.5</share-weight>
+					<share-weight year="2055">0.5</share-weight>
+                    <share-weight year="2060">0.5</share-weight>
+                    <share-weight year="2065">0.5</share-weight>
+                    <share-weight year="2070">0.5</share-weight>
+                    <share-weight year="2075">0.5</share-weight>
+                    <share-weight year="2080">0.5</share-weight>
+                    <share-weight year="2085">0.5</share-weight>
+                    <share-weight year="2090">0.5</share-weight>
+					<share-weight year="2095">0.5</share-weight>
+                    <share-weight year="2100">0.5</share-weight>
+                </subsector>
+ 		</supplysector>
+<supplysector name="comm others">
+                <keyword final-energy="building"/>
+				<subsector name="electricity">
+    					<interpolation-rule apply-to="share-weight"  delete="1"
+                        from-year="2010" to-year="2015">
+                         <to-value>0.5</to-value>
+                        <interpolation-function name="linear"/>
+                    	</interpolation-rule>
+                    <share-weight year="2015">0.5</share-weight>
+					<share-weight year="2020">0.5</share-weight>
+					<share-weight year="2025">0.5</share-weight>
+					<share-weight year="2030">0.5</share-weight>
+					<share-weight year="2035">0.5</share-weight>
+					<share-weight year="2040">0.5</share-weight>
+					<share-weight year="2045">0.5</share-weight>
+					<share-weight year="2050">0.5</share-weight>
+					<share-weight year="2055">0.5</share-weight>
+                    <share-weight year="2060">0.5</share-weight>
+                    <share-weight year="2065">0.5</share-weight>
+                    <share-weight year="2070">0.5</share-weight>
+                    <share-weight year="2075">0.5</share-weight>
+                    <share-weight year="2080">0.5</share-weight>
+                    <share-weight year="2085">0.5</share-weight>
+                    <share-weight year="2090">0.5</share-weight>
+					<share-weight year="2095">0.5</share-weight>
+                    <share-weight year="2100">0.5</share-weight>
+                </subsector>
+ 		</supplysector>
+<supplysector name="resid heating">
+                <keyword final-energy="building"/>
+				<subsector name="electricity">
+    					<interpolation-rule apply-to="share-weight"  delete="1"
+                        from-year="2010" to-year="2015">
+                         <to-value>2.765</to-value>
+                        <interpolation-function name="linear"/>
+                    	</interpolation-rule>
+                    <share-weight year="2015">2.765</share-weight>
+					<share-weight year="2020">2.765</share-weight>
+					<share-weight year="2025">2.765</share-weight>
+					<share-weight year="2030">2.765</share-weight>
+					<share-weight year="2035">2.765</share-weight>
+					<share-weight year="2040">2.765</share-weight>
+					<share-weight year="2045">2.765</share-weight>
+					<share-weight year="2050">2.765</share-weight>
+					<share-weight year="2055">2.765</share-weight>
+                    <share-weight year="2060">2.765</share-weight>
+                    <share-weight year="2065">2.765</share-weight>
+                    <share-weight year="2070">2.765</share-weight>
+                    <share-weight year="2075">2.765</share-weight>
+                    <share-weight year="2080">2.765</share-weight>
+                    <share-weight year="2085">2.765</share-weight>
+                    <share-weight year="2090">2.765</share-weight>
+					<share-weight year="2095">2.765</share-weight>
+                    <share-weight year="2100">2.765</share-weight>
+                </subsector>
+ 		</supplysector>
+<supplysector name="comm cooling">
+                <keyword final-energy="building"/>
+				<subsector name="electricity">
+    					<interpolation-rule apply-to="share-weight"  delete="1"
+                        from-year="2010" to-year="2015">
+                         <to-value>0.5</to-value>
+                        <interpolation-function name="linear"/>
+                    	</interpolation-rule>
+                    <share-weight year="2015">0.5</share-weight>
+					<share-weight year="2020">0.5</share-weight>
+					<share-weight year="2025">0.5</share-weight>
+					<share-weight year="2030">0.5</share-weight>
+					<share-weight year="2035">0.5</share-weight>
+					<share-weight year="2040">0.5</share-weight>
+					<share-weight year="2045">0.5</share-weight>
+					<share-weight year="2050">0.5</share-weight>
+					<share-weight year="2055">0.5</share-weight>
+                    <share-weight year="2060">0.5</share-weight>
+                    <share-weight year="2065">0.5</share-weight>
+                    <share-weight year="2070">0.5</share-weight>
+                    <share-weight year="2075">0.5</share-weight>
+                    <share-weight year="2080">0.5</share-weight>
+                    <share-weight year="2085">0.5</share-weight>
+                    <share-weight year="2090">0.5</share-weight>
+					<share-weight year="2095">0.5</share-weight>
+                    <share-weight year="2100">0.5</share-weight>
+                </subsector>
+ 		</supplysector>
+<supplysector name="comm others">
+                <keyword final-energy="building"/>
+				<subsector name="electricity">
+    					<interpolation-rule apply-to="share-weight"  delete="1"
+                        from-year="2010" to-year="2015">
+                         <to-value>0.5</to-value>
+                        <interpolation-function name="linear"/>
+                    	</interpolation-rule>
+                    <share-weight year="2015">0.5</share-weight>
+					<share-weight year="2020">0.5</share-weight>
+					<share-weight year="2025">0.5</share-weight>
+					<share-weight year="2030">0.5</share-weight>
+					<share-weight year="2035">0.5</share-weight>
+					<share-weight year="2040">0.5</share-weight>
+					<share-weight year="2045">0.5</share-weight>
+					<share-weight year="2050">0.5</share-weight>
+					<share-weight year="2055">0.5</share-weight>
+                    <share-weight year="2060">0.5</share-weight>
+                    <share-weight year="2065">0.5</share-weight>
+                    <share-weight year="2070">0.5</share-weight>
+                    <share-weight year="2075">0.5</share-weight>
+                    <share-weight year="2080">0.5</share-weight>
+                    <share-weight year="2085">0.5</share-weight>
+                    <share-weight year="2090">0.5</share-weight>
+					<share-weight year="2095">0.5</share-weight>
+                    <share-weight year="2100">0.5</share-weight>
+                </subsector>
+ 		</supplysector>
+<supplysector name="comm heating">
+                <keyword final-energy="building"/>
+				<subsector name="electricity">
+    					<interpolation-rule apply-to="share-weight"  delete="1"
+                        from-year="2010" to-year="2015">
+                         <to-value>7.908</to-value>
+                        <interpolation-function name="linear"/>
+                    	</interpolation-rule>
+                    <share-weight year="2015">7.908</share-weight>
+					<share-weight year="2020">7.908</share-weight>
+					<share-weight year="2025">7.908</share-weight>
+					<share-weight year="2030">7.908</share-weight>
+					<share-weight year="2035">7.908</share-weight>
+					<share-weight year="2040">7.908</share-weight>
+					<share-weight year="2045">7.908</share-weight>
+					<share-weight year="2050">7.908</share-weight>
+					<share-weight year="2055">7.908</share-weight>
+                    <share-weight year="2060">7.908</share-weight>
+                    <share-weight year="2065">7.908</share-weight>
+                    <share-weight year="2070">7.908</share-weight>
+                    <share-weight year="2075">7.908</share-weight>
+                    <share-weight year="2080">7.908</share-weight>
+                    <share-weight year="2085">7.908</share-weight>
+                    <share-weight year="2090">7.908</share-weight>
+					<share-weight year="2095">7.908</share-weight>
+                    <share-weight year="2100">7.908</share-weight>
+                </subsector>
+ 		</supplysector>
+        </region>
+    </world>
+</scenario>

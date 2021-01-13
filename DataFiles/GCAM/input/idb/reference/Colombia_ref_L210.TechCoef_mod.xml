@@ -1,0 +1,2023 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scenario>
+    <world>
+        <region name="Colombia">
+            <supplysector name="regional coal">
+                <subsector name="regional coal">
+                    <technology name="regional coal">
+                        <period year="1975">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.047748863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.156553648</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.035292638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="1990">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.047748863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.156553648</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.035292638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2005">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.047748863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.156553648</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.035292638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2010">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.047748863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.156553648</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.035292638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2015">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.047748863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.156553648</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.035292638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2020">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.047748863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.156553648</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.035292638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2025">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.047748863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.156553648</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.035292638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2030">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.047748863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.156553648</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.035292638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2035">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.047748863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.156553648</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.035292638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2040">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.047748863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.156553648</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.035292638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2045">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.047748863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.156553648</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.035292638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2050">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.047748863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.156553648</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.035292638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2055">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.047748863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.156553648</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.035292638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2060">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.047748863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.156553648</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.035292638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2065">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.047748863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.156553648</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.035292638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2070">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.047748863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.156553648</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.035292638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2075">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.047748863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.156553648</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.035292638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2080">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.047748863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.156553648</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.035292638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2085">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.047748863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.156553648</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.035292638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2090">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.047748863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.156553648</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.035292638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2095">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.047748863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.156553648</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.035292638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2100">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.047748863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.156553648</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.035292638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="regional oil">
+                <subsector name="crude oil">
+                    <technology name="crude oil">
+                        <period year="1975">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.551724863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>1.808933975</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.407796638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="1990">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.551724863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>1.808933975</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.407796638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2005">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.551724863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>1.808933975</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.407796638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2010">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.551724863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>1.808933975</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.407796638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2015">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.551724863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>1.808933975</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.407796638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2020">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.551724863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>1.808933975</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.407796638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2025">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.551724863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>1.808933975</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.407796638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2030">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.551724863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>1.808933975</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.407796638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2035">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.551724863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>1.808933975</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.407796638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2040">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.551724863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>1.808933975</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.407796638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2045">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.551724863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>1.808933975</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.407796638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2050">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.551724863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>1.808933975</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.407796638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2055">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.551724863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>1.808933975</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.407796638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2060">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.551724863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>1.808933975</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.407796638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2065">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.551724863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>1.808933975</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.407796638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2070">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.551724863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>1.808933975</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.407796638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2075">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.551724863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>1.808933975</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.407796638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2080">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.551724863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>1.808933975</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.407796638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2085">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.551724863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>1.808933975</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.407796638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2090">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.551724863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>1.808933975</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.407796638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2095">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.551724863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>1.808933975</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.407796638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2100">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.551724863</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>1.808933975</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.407796638</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="regional natural gas">
+                <subsector name="regional natural gas">
+                    <technology name="regional natural gas">
+                        <period year="1975">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.000107381</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.00035207</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>7.93688E-05</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="1990">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.000107381</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.00035207</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>7.93688E-05</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2005">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.000107381</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.00035207</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>7.93688E-05</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2010">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.000107381</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.00035207</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>7.93688E-05</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2015">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.000107381</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.00035207</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>7.93688E-05</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2020">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.000107381</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.00035207</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>7.93688E-05</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2025">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.000107381</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.00035207</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>7.93688E-05</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2030">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.000107381</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.00035207</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>7.93688E-05</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2035">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.000107381</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.00035207</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>7.93688E-05</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2040">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.000107381</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.00035207</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>7.93688E-05</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2045">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.000107381</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.00035207</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>7.93688E-05</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2050">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.000107381</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.00035207</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>7.93688E-05</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2055">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.000107381</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.00035207</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>7.93688E-05</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2060">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.000107381</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.00035207</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>7.93688E-05</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2065">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.000107381</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.00035207</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>7.93688E-05</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2070">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.000107381</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.00035207</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>7.93688E-05</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2075">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.000107381</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.00035207</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>7.93688E-05</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2080">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.000107381</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.00035207</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>7.93688E-05</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2085">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.000107381</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.00035207</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>7.93688E-05</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2090">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.000107381</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.00035207</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>7.93688E-05</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2095">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.000107381</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.00035207</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>7.93688E-05</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2100">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.000107381</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.00035207</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>7.93688E-05</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="nuclearFuelGenII">
+                <subsector name="enrichedUranium">
+                    <technology name="enrichedUranium">
+                        <period year="1975">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="1990">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2005">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2010">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2015">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2020">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2025">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2030">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2035">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2040">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2045">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2050">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2055">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2060">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2065">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2070">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2075">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2080">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2085">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2090">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2095">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2100">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="nuclearFuelGenIII">
+                <subsector name="enrichedUranium">
+                    <technology name="enrichedUranium">
+                        <period year="1975">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="1990">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2005">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2010">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2015">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2020">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2025">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2030">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2035">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2040">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2045">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2050">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2055">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2060">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2065">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2070">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2075">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2080">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2085">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2090">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2095">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2100">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.072303375</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.237060246</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.053441625</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="unconventional oil production">
+                <subsector name="unconventional oil production">
+                    <technology name="unconventional oil production">
+                        <period year="1975">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.079963238</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.262174549</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.059103263</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="1990">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.079963238</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.262174549</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.059103263</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2005">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.079963238</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.262174549</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.059103263</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2010">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.079963238</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.262174549</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.059103263</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2015">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.079963238</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.262174549</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.059103263</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2020">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.079963238</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.262174549</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.059103263</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2025">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.079963238</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.262174549</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.059103263</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2030">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.079963238</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.262174549</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.059103263</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2035">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.079963238</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.262174549</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.059103263</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2040">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.079963238</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.262174549</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.059103263</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2045">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.079963238</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.262174549</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.059103263</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2050">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.079963238</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.262174549</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.059103263</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2055">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.079963238</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.262174549</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.059103263</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2060">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.079963238</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.262174549</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.059103263</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2065">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.079963238</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.262174549</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.059103263</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2070">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.079963238</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.262174549</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.059103263</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2075">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.079963238</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.262174549</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.059103263</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2080">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.079963238</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.262174549</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.059103263</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2085">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.079963238</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.262174549</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.059103263</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2090">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.079963238</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.262174549</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.059103263</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2095">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.079963238</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.262174549</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.059103263</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2100">
+                            <minicam-energy-input name="water_td_pri_C">
+                                <coefficient>0.079963238</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <CO2 name="CO2"/>
+                            <minicam-energy-input name="water_td_pri_W">
+                                <coefficient>0.262174549</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="seawater">
+                                <coefficient>0.059103263</coefficient>
+                                <market-name>Colombia</market-name>
+                            </minicam-energy-input>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+        </region>
+    </world>
+</scenario>

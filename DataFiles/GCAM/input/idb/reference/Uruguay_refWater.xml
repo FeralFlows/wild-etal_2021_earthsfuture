@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scenario>
+    <world>
+        <region name="Uruguay">
+            <supplysector name="industry">
+                <subsector name="industry">
+                    <technology name="industry">
+                        <period year="2010">
+                            <minicam-energy-input name="water_td_ind_C">
+                                <coefficient>0.85</coefficient>
+                                <market-name>Uruguay</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="water_td_ind_W">
+                                <coefficient>8.5</coefficient>
+                                <market-name>Uruguay</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2015">
+                            <minicam-energy-input name="water_td_ind_C">
+                                <coefficient>0.85</coefficient>
+                                <market-name>Uruguay</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="water_td_ind_W">
+                                <coefficient>8.5</coefficient>
+                                <market-name>Uruguay</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2020">
+                            <minicam-energy-input name="water_td_ind_C">
+                                <coefficient>0.85</coefficient>
+                                <market-name>Uruguay</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="water_td_ind_W">
+                                <coefficient>8.5</coefficient>
+                                <market-name>Uruguay</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2025">
+                            <minicam-energy-input name="water_td_ind_C">
+                                <coefficient>0.85</coefficient>
+                                <market-name>Uruguay</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="water_td_ind_W">
+                                <coefficient>8.5</coefficient>
+                                <market-name>Uruguay</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2030">
+                            <minicam-energy-input name="water_td_ind_C">
+                                <coefficient>0.85</coefficient>
+                                <market-name>Uruguay</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="water_td_ind_W">
+                                <coefficient>8.5</coefficient>
+                                <market-name>Uruguay</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2035">
+                            <minicam-energy-input name="water_td_ind_C">
+                                <coefficient>0.85</coefficient>
+                                <market-name>Uruguay</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="water_td_ind_W">
+                                <coefficient>8.5</coefficient>
+                                <market-name>Uruguay</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2040">
+                            <minicam-energy-input name="water_td_ind_C">
+                                <coefficient>0.85</coefficient>
+                                <market-name>Uruguay</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="water_td_ind_W">
+                                <coefficient>8.5</coefficient>
+                                <market-name>Uruguay</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2045">
+                            <minicam-energy-input name="water_td_ind_C">
+                                <coefficient>0.85</coefficient>
+                                <market-name>Uruguay</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="water_td_ind_W">
+                                <coefficient>8.5</coefficient>
+                                <market-name>Uruguay</market-name>
+                            </minicam-energy-input>
+                        </period>
+                        <period year="2050">
+                            <minicam-energy-input name="water_td_ind_C">
+                                <coefficient>0.85</coefficient>
+                                <market-name>Uruguay</market-name>
+                            </minicam-energy-input>
+                            <minicam-energy-input name="water_td_ind_W">
+                                <coefficient>8.5</coefficient>
+                                <market-name>Uruguay</market-name>
+                            </minicam-energy-input>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            </region>
+    </world>
+</scenario>

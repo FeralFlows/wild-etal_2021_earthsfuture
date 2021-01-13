@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scenario>
+    <world>
+        <region name="Uruguay">
+            <supplysector name="electricity">
+                <subsector name="hydro">
+                    <stub-technology name="hydro">
+                        <period year="2010">
+                            <fixedOutput>0.0311987304</fixedOutput>
+                            <share-weight>0</share-weight>
+                        </period>
+                        <period year="2015">
+                            <fixedOutput>0.02397028428</fixedOutput>
+                            <share-weight>0</share-weight>
+                        </period>
+                        <period year="2020">
+                            <fixedOutput>0.02397028428</fixedOutput>
+                            <share-weight>0</share-weight>
+                        </period>
+                        <period year="2025">
+                            <fixedOutput>0.02397028428</fixedOutput>
+                            <share-weight>0</share-weight>
+                        </period>
+                        <period year="2030">
+                            <fixedOutput>0.02397028428</fixedOutput>
+                            <share-weight>0</share-weight>
+                        </period>
+                        <period year="2035">
+                            <fixedOutput>0.02397028428</fixedOutput>
+                            <share-weight>0</share-weight>
+                        </period>
+                        <period year="2040">
+                            <fixedOutput>0.02397028428</fixedOutput>
+                            <share-weight>0</share-weight>
+                        </period>
+                        <period year="2045">
+                            <fixedOutput>0.02397028428</fixedOutput>
+                            <share-weight>0</share-weight>
+                        </period>
+                        <period year="2050">
+                            <fixedOutput>0.02397028428</fixedOutput>
+                            <share-weight>0</share-weight>
+                        </period>
+						<period year="2055">
+                            <fixedOutput>0.02397028428</fixedOutput>
+                            <share-weight>0</share-weight>
+                        </period>
+						<period year="2060">
+                            <fixedOutput>0.02397028428</fixedOutput>
+                            <share-weight>0</share-weight>
+                        </period>
+						<period year="2065">
+                            <fixedOutput>0.02397028428</fixedOutput>
+                            <share-weight>0</share-weight>
+                        </period>
+						<period year="2070">
+                            <fixedOutput>0.02397028428</fixedOutput>
+                            <share-weight>0</share-weight>
+                        </period>
+						<period year="2075">
+                            <fixedOutput>0.02397028428</fixedOutput>
+                            <share-weight>0</share-weight>
+                        </period>
+						<period year="2080">
+                            <fixedOutput>0.02397028428</fixedOutput>
+                            <share-weight>0</share-weight>
+                        </period>
+						<period year="2085">
+                            <fixedOutput>0.02397028428</fixedOutput>
+                            <share-weight>0</share-weight>
+                        </period>
+						<period year="2090">
+                            <fixedOutput>0.02397028428</fixedOutput>
+                            <share-weight>0</share-weight>
+                        </period>
+						<period year="2095">
+                            <fixedOutput>0.02397028428</fixedOutput>
+                            <share-weight>0</share-weight>
+                        </period>
+						<period year="2100">
+                            <fixedOutput>0.02397028428</fixedOutput>
+                            <share-weight>0</share-weight>
+                        </period>
+                    </stub-technology>
+                </subsector>
+            </supplysector>
+        </region>
+    </world>
+</scenario>

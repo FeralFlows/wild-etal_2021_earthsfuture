@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scenario>
+    <world>
+        <region name="Colombia">
+            <ghgpolicy name="GHG_tax">
+                <market>Colombia</market>
+                <fixedTax year="2020">164.864</fixedTax>
+                <fixedTax year="2025">287.51</fixedTax>
+                <fixedTax year="2030">353.031</fixedTax>
+                <fixedTax year="2035">382.351</fixedTax>
+                <fixedTax year="2040">416.893</fixedTax>
+                <fixedTax year="2045">458.173</fixedTax>
+                <fixedTax year="2050">520.525</fixedTax>
+                <fixedTax year="2055">1</fixedTax>
+                <fixedTax year="2060">1</fixedTax>
+                <fixedTax year="2065">1</fixedTax>
+                <fixedTax year="2070">1</fixedTax>
+                <fixedTax year="2075">1</fixedTax>
+                <fixedTax year="2080">1</fixedTax>
+                <fixedTax year="2085">1</fixedTax>
+                <fixedTax year="2090">1</fixedTax>
+                <fixedTax year="2095">1</fixedTax>
+                <fixedTax year="2100">1</fixedTax>
+            </ghgpolicy>
+        </region>
+        <region name="Argentina">
+            <ghgpolicy name="GHG_tax">
+                <market>Argentina</market>
+                <fixedTax year="2020">189.649</fixedTax>
+                <fixedTax year="2025">273.896</fixedTax>
+                <fixedTax year="2030">329.818</fixedTax>
+                <fixedTax year="2035">362.357</fixedTax>
+                <fixedTax year="2040">391.932</fixedTax>
+                <fixedTax year="2045">432.793</fixedTax>
+                <fixedTax year="2050">507.505</fixedTax>
+                <fixedTax year="2055">1</fixedTax>
+                <fixedTax year="2060">1</fixedTax>
+                <fixedTax year="2065">1</fixedTax>
+                <fixedTax year="2070">1</fixedTax>
+                <fixedTax year="2075">1</fixedTax>
+                <fixedTax year="2080">1</fixedTax>
+                <fixedTax year="2085">1</fixedTax>
+                <fixedTax year="2090">1</fixedTax>
+                <fixedTax year="2095">1</fixedTax>
+                <fixedTax year="2100">1</fixedTax>
+            </ghgpolicy>
+        </region>
+        <region name="USA">
+            <ghgpolicy name="GHG_tax">
+                <market>row</market>
+                <fixedTax year="2020">163.854</fixedTax>
+                <fixedTax year="2025">236.824</fixedTax>
+                <fixedTax year="2030">287.405</fixedTax>
+                <fixedTax year="2035">331.888</fixedTax>
+                <fixedTax year="2040">385.634</fixedTax>
+                <fixedTax year="2045">458.887</fixedTax>
+                <fixedTax year="2050">558.841</fixedTax>
+                <fixedTax year="2055">1</fixedTax>
+                <fixedTax year="2060">1</fixedTax>
+                <fixedTax year="2065">1</fixedTax>
+                <fixedTax year="2070">1</fixedTax>
+                <fixedTax year="2075">1</fixedTax>
+                <fixedTax year="2080">1</fixedTax>
+                <fixedTax year="2085">1</fixedTax>
+                <fixedTax year="2090">1</fixedTax>
+                <fixedTax year="2095">1</fixedTax>
+                <fixedTax year="2100">1</fixedTax>
+            </ghgpolicy>
+        </region>
+        <region name="Africa_Northern">
+            <ghgpolicy name="GHG_tax">
+                <market>row</market>
+            </ghgpolicy>
+        </region>
+        <region name="Africa_Southern">
+            <ghgpolicy name="GHG_tax">
+                <market>row</market>
+            </ghgpolicy>
+        </region>
+        <region name="Africa_Western">
+            <ghgpolicy name="GHG_tax">
+                <market>row</market>
+            </ghgpolicy>
+        </region>
+        <region name="Brazil">
+            <ghgpolicy name="GHG_tax">
+                <market>row</market>
+            </ghgpolicy>
+        </region>
+        <region name="Canada">
+            <ghgpolicy name="GHG_tax">
+                <market>row</market>
+            </ghgpolicy>
+        </region>
+        <region name="Central America and Caribbean">
+            <ghgpolicy name="GHG_tax">
+                <market>row</market>
+            </ghgpolicy>
+        </region>
+        <region name="Central Asia">
+            <ghgpolicy name="GHG_tax">
+                <market>row</market>
+            </ghgpolicy>
+        </region>
+        <region name="China">
+            <ghgpolicy name="GHG_tax">
+                <market>row</market>
+            </ghgpolicy>
+        </region>
+        <region name="EU-12">
+            <ghgpolicy name="GHG_tax">
+                <market>row</market>
+            </ghgpolicy>
+        </region>
+        <region name="EU-15">
+            <ghgpolicy name="GHG_tax">
+                <market>row</market>
+            </ghgpolicy>
+        </region>
+        <region name="Europe_Eastern">
+            <ghgpolicy name="GHG_tax">
+                <market>row</market>
+            </ghgpolicy>
+        </region>
+        <region name="Europe_Non_EU">
+            <ghgpolicy name="GHG_tax">
+                <market>row</market>
+            </ghgpolicy>
+        </region>
+        <region name="European Free Trade Association">
+            <ghgpolicy name="GHG_tax">
+                <market>row</market>
+            </ghgpolicy>
+        </region>
+        <region name="India">
+            <ghgpolicy name="GHG_tax">
+                <market>row</market>
+            </ghgpolicy>
+        </region>
+        <region name="Indonesia">
+            <ghgpolicy name="GHG_tax">
+                <market>row</market>
+            </ghgpolicy>
+        </region>
+        <region name="Japan">
+            <ghgpolicy name="GHG_tax">
+                <market>row</market>
+            </ghgpolicy>
+        </region>
+        <region name="Mexico">
+            <ghgpolicy name="GHG_tax">
+                <market>row</market>
+            </ghgpolicy>
+        </region>
+        <region name="Middle East">
+            <ghgpolicy name="GHG_tax">
+                <market>row</market>
+            </ghgpolicy>
+        </region>
+        <region name="Pakistan">
+            <ghgpolicy name="GHG_tax">
+                <market>row</market>
+            </ghgpolicy>
+        </region>
+        <region name="Russia">
+            <ghgpolicy name="GHG_tax">
+                <market>row</market>
+            </ghgpolicy>
+        </region>
+        <region name="South Africa">
+            <ghgpolicy name="GHG_tax">
+                <market>row</market>
+            </ghgpolicy>
+        </region>
+        <region name="South America_Northern">
+            <ghgpolicy name="GHG_tax">
+                <market>row</market>
+            </ghgpolicy>
+        </region>
+        <region name="South America_Southern">
+            <ghgpolicy name="GHG_tax">
+                <market>row</market>
+            </ghgpolicy>
+        </region>
+        <region name="South Asia">
+            <ghgpolicy name="GHG_tax">
+                <market>row</market>
+            </ghgpolicy>
+        </region>
+        <region name="South Korea">
+            <ghgpolicy name="GHG_tax">
+                <market>row</market>
+            </ghgpolicy>
+        </region>
+        <region name="Southeast Asia">
+            <ghgpolicy name="GHG_tax">
+                <market>row</market>
+            </ghgpolicy>
+        </region>
+        <region name="Taiwan">
+            <ghgpolicy name="GHG_tax">
+                <market>row</market>
+            </ghgpolicy>
+        </region>
+        <region name="Uruguay">
+            <ghgpolicy name="GHG_tax">
+                <market>row</market>
+            </ghgpolicy>
+        </region>
+        <region name="Africa_Eastern">
+            <ghgpolicy name="GHG_tax">
+                <market>row</market>
+            </ghgpolicy>
+        </region>
+        <region name="Australia_NZ">
+            <ghgpolicy name="GHG_tax">
+                <market>row</market>
+            </ghgpolicy>
+        </region>
+    </world>
+</scenario>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scenario>
+    <world>
+        <region name="Uruguay">
+            <energy-final-demand name="building">
+                <income-elasticity year="2015">0.738</income-elasticity>
+                <income-elasticity year="2020">0.711</income-elasticity>
+                <income-elasticity year="2025">0.68</income-elasticity>
+                <income-elasticity year="2030">0.648</income-elasticity>
+                <income-elasticity year="2035">0.611</income-elasticity>
+                <income-elasticity year="2040">0.567</income-elasticity>
+                <income-elasticity year="2045">0.515</income-elasticity>
+                <income-elasticity year="2050">0.454</income-elasticity>
+                <income-elasticity year="2055">0.381</income-elasticity>
+                <income-elasticity year="2060">0.315</income-elasticity>
+                <income-elasticity year="2065">0.242</income-elasticity>
+                <income-elasticity year="2070">0.161</income-elasticity>
+                <income-elasticity year="2075">0.078</income-elasticity>
+                <income-elasticity year="2080">0</income-elasticity>
+                <income-elasticity year="2085">0</income-elasticity>
+                <income-elasticity year="2090">0</income-elasticity>
+                <income-elasticity year="2095">0</income-elasticity>
+                <income-elasticity year="2100">0</income-elasticity>
+            </energy-final-demand>
+        </region>
+    </world>
+</scenario>

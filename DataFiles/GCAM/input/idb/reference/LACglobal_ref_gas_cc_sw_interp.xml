@@ -1,0 +1,14 @@
+<scenario>
+    <world>
+        <global-technology-database>
+            <location-info sector-name="electricity" subsector-name="gas">
+                <technology name="gas (CC)">
+                    <interpolation-rule apply-to="share-weight"
+                        from-year="2010" to-year="2100">
+                        <interpolation-function name="s-curve"/>
+                    </interpolation-rule>
+                </technology>
+            </location-info>
+        </global-technology-database>
+    </world>
+</scenario>

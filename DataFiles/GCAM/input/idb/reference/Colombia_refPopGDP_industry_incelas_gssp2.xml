@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scenario>
+    <world>
+        <region name="Colombia">
+            <energy-final-demand name="industry">
+                <income-elasticity year="2100">0.254</income-elasticity>
+                <income-elasticity year="2095">0.259</income-elasticity>
+                <income-elasticity year="2090">0.278</income-elasticity>
+                <income-elasticity year="2085">0.3</income-elasticity>
+                <income-elasticity year="2080">0.321</income-elasticity>
+                <income-elasticity year="2075">0.343</income-elasticity>
+                <income-elasticity year="2070">0.392</income-elasticity>
+                <income-elasticity year="2065">0.458</income-elasticity>
+                <income-elasticity year="2060">0.525</income-elasticity>
+                <income-elasticity year="2055">0.592</income-elasticity>
+                <income-elasticity year="2050">0.655</income-elasticity>
+                <income-elasticity year="2045">0.713</income-elasticity>
+                <income-elasticity year="2040">0.769</income-elasticity>
+                <income-elasticity year="2035">0.82</income-elasticity>
+                <income-elasticity year="2030">0.865</income-elasticity>
+                <income-elasticity year="2025">0.912</income-elasticity>
+                <income-elasticity year="2020">0.986</income-elasticity>
+                <income-elasticity year="2015">1.034</income-elasticity>
+            </energy-final-demand>
+        </region>
+    </world>
+</scenario>
