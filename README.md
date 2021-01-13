@@ -68,8 +68,9 @@ Update your journal reference here after acceptance.
 <!-------------------------->
 <!-------------------------->
 
-Please note that the models used in this research are the versions labeled in Table 1.
+Please note that the models used in this research are the versions labeled in [Table 1](#table1).
 
+<a name="table1"></a>
 **Table 1:** Model repository and DOI links.
 
 | Model | Version | Repository Link | DOI |
@@ -93,10 +94,11 @@ Please note that the models used in this research are the versions labeled in Ta
 ### 1. Input Data
 
 #### Forcing Data
-In the study of Argentina Energy-Water-Land systems, we selected one climate impact scenario from Global Climate Model (GCM) MIROC-ESM-CHEM forced by Representative Concentration Pathway (RCP) 6.0. The source of climate data for Xanthos is obtained from ISIMIP Fast Track Dataset (citation). Input data for GCAM, Demeter, and Tethys are outputs from their feeding models described in Figure 1. Generally, those outputs need to be post-processed to required formats in order to feed into other models as inputs. We provide R scripts in section [Reproduce My Experiment](#reproduce-my-experiment) for reproducing the post-processed input data.
+In the study of Argentina Energy-Water-Land systems, we selected one climate impact scenario from Global Climate Model (GCM) MIROC-ESM-CHEM forced by Representative Concentration Pathway (RCP) 6.0. The source of climate data for Xanthos is obtained from ISIMIP Fast Track Dataset (citation). Input data for GCAM, Demeter, and Tethys are outputs from their feeding models described in [Figure 1](#figure1). Generally, those outputs need to be post-processed to required formats in order to feed into other models as inputs. We provide R scripts in section [Reproduce My Experiment](#reproduce-my-experiment) for reproducing the post-processed input data.
 
-For broader use of these data, we also provide post-processed input dataset directly (See DOI link in Table 2). These data includes all 20 combinations of GCM/RCP scenarios. There are 5 GCMs (i.e., GFDL-ESM2M, HadGEM2-ES, IPSL-CM5A-LR, MIROC-ESM-CHEM, and NorESM1-M) and 4 RCPs (i.e., rcp2.6, rcp4.5, rcp6.0, and rcp8.5).
+For broader use of these data, we also provide post-processed input dataset directly (See DOI link in [Table 2](#table2)). These data includes all 20 combinations of GCM/RCP scenarios. There are 5 GCMs (i.e., GFDL-ESM2M, HadGEM2-ES, IPSL-CM5A-LR, MIROC-ESM-CHEM, and NorESM1-M) and 4 RCPs (i.e., rcp2.6, rcp4.5, rcp6.0, and rcp8.5).
 
+<a name="table2"></a>
 **Table 2:** Input data for each model and DOI links.
 
 | Input Data Category | Model | DOI | Description |
@@ -107,29 +109,32 @@ For broader use of these data, we also provide post-processed input dataset dire
 | GCAM database | Tethys | <http://doi.org/10.5281/zenodo.4420154> | [basex files] created from GCAM runs by GCM. Each GCM run includes 8 combinations from 4 rcps and 2 scenarios (i.e., Climate Impacts scenario and Policy scenario) |
 
 #### Files Replaced for Argentina Study
-For the Argentina study, we replaced default files of each model with modified files we provide in Table 3. For configuration and model run files, you will need to modify the directories based on the location of your models. More detailed summary of data and files can be found in [File Replacement Record](https://).
+For the Argentina study, we replaced default files of each model with modified files we provide in [Table 3](#table3). For configuration and model run files, you will need to modify the directories based on the location of your models. More detailed summary of data and files can be found in [File Replacement Record](https://).
 
+<a name="table3"></a>
 **Table 3:** Files replaced for model modifications in the Argentina Nexus study.
 
 | File Category | Model | Directory |
 |---------------|-------|-----------|
-| Runoff Module | Xanthos | ArgentinaNexus/DataFiles/Xanthos/example/input/runoff/ |
-| Xanthos Configuration and Model Run | Xanthos | ArgentinaNexus/DataFiles/Xanthos/example/ |
-| GCAM Configuration and Batch Files | GCAM | ArgentinaNexus/DataFiles/GCAM/ |
+| Runoff Module | Xanthos | ArgentinaNexus/DataFiles/Xanthos/example/input/runoff |
+| Xanthos Configuration and Model Run | Xanthos | ArgentinaNexus/DataFiles/Xanthos/example |
+| GCAM Configuration and Batch Files | GCAM | ArgentinaNexus/DataFiles/GCAM |
+| IDB | GCAM | ArgentinaNexus/DataFiles/GCAM/input/idb |
 | Allocation | Demeter | ArgentinaNexus/DataFiles/Demeter/example/inputs/allocation |
 | Constraints | Demeter | ArgentinaNexus/DataFiles/Demeter/example/inputs/constraints |
 | Observation | Demeter | ArgentinaNexus/DataFiles/Demeter/example/inputs/observed |
 | Reference | Demeter | ArgentinaNexus/DataFiles/Demeter/example/inputs/reference |
-| Demeter Configuration | Demeter | ArgentinaNexus/DataFiles/Demeter/example/ |
-| Region Grids | Tethys | ArgentinaNexus/DataFiles/Tethys/example/Input/harmonized_inputs/ |
-| Region Names | Tethys | ArgentinaNexus/DataFiles/Tethys/example/Input/rng33/ |
-| Livestock Fraction | Tethys | ArgentinaNexus/DataFiles/Tethys/example/Input/rng33/ |
-| Electricity | Tethys | ArgentinaNexus/DataFiles/Tethys/example/Input/rng33/TD_Elec_paras/ |
+| Demeter Configuration | Demeter | ArgentinaNexus/DataFiles/Demeter/example |
+| Region Grids | Tethys | ArgentinaNexus/DataFiles/Tethys/example/Input/harmonized_inputs |
+| Region Names | Tethys | ArgentinaNexus/DataFiles/Tethys/example/Input/rng33 |
+| Livestock Fraction | Tethys | ArgentinaNexus/DataFiles/Tethys/example/Input/rng33 |
+| Electricity | Tethys | ArgentinaNexus/DataFiles/Tethys/example/Input/rng33/TD_Elec_paras |
 
 
 ### 2. Output Data
-For broader use, we provide output dataset from model runs with all 20 combinations of GCM/RCP scenarios (See Table 4).
+For broader use, we provide output dataset from model runs with all 20 combinations of GCM/RCP scenarios (See [Table 4](#table4)).
 
+<a name="table4"></a>
 **Table 4:** DOI links of model outputs for 20 GCM/RCP scenarios.
 
 | Model | DOI |
@@ -191,8 +196,10 @@ This experiment is conducted under Windows 64-bit operating system.
 
   * Replace gcam-core_LAC_v02_5Nov2019/exe/configuration_LAC.xml with ArgentinaNexus/DataFiles/GCAM/configuration_LAC.xml in the cloned ArgentinaNexus repository
   * Replace gcam-core_LAC_v02_5Nov2019/exe/batch_LAC.xml with ArgentinaNexus/DataFiles/GCAM/batch_LAC.xml
-  * Replace folder 'Ag' within directory gcam-core_LAC_v02_5Nov2019/input/idb/impacts/ with same folder from downloaded 'GCAM_input_idb_impacts.zip'.
-  * (Optional) Replace folders 'Hydro' and 'Water' within directory gcam-core_LAC_v02_5Nov2019/input/idb/impacts/ with same folder from downloaded 'GCAM_input_idb_impacts.zip'. You may also reproduce those XML files within 'Water' and 'Hydro' from Xanthos run and post-processing R script.
+  * Copy XML files from ArgentinaNexus/DataFiles/GCAM/input/idb/reference and paste to gcam-core_LAC_v02_5Nov2019/input/idb/reference
+  * Copy XML files from ArgentinaNexus/DataFiles/GCAM/input/idb/policy and paste to gcam-core_LAC_v02_5Nov2019/input/idb/policy
+  * Replace folder 'Ag' within directory gcam-core_LAC_v02_5Nov2019/input/idb/impacts with same folder from downloaded 'GCAM_input_idb_impacts.zip'.
+  * (Optional) Replace folders 'Hydro' and 'Water' within gcam-core_LAC_v02_5Nov2019/input/idb/impacts with 'Hrdro' and 'Water' folders from downloaded 'GCAM_input_idb_impacts.zip'. If you want to reproduce those XML files within 'Water' and 'Hydro' by yourself, follow steps for Xanthos model run and post-process Xanthos results in [Reproduce My Experiment](#reproduce-my-experiment) section.
   
 **Notes:* GCAM v5.1.3-LAC is a modified version from GCAM-Core-v5.1.3 for the study in Latin America and the Caribbean (LAC) Region. A 64-bit Java is required to run GCAM. We recommend the open source version of Java ([OpenJDK](http://openjdk.java.net/)). More details on GCAM installation, setting up, and trouble shooting, please refer to [GCAM Documentation](https://github.com/JGCRI/gcam-core).
 
@@ -238,8 +245,9 @@ For downloaded models from DOI links provided in [Contributing Models](#contribu
   * Download projected climate data for 5 GCMs in [temporary Google Drive link](https://drive.google.com/drive/folders/1gLK1uAHsGRGolKg1Y0896QZzB9AD8OiE?usp=sharing). Move 5 downloaded data folders under the directory xanthos/example/input/climate/. **This is a temporary link from google drive and only people with permission will be able to download. We will replace the temporary link with DataHub DOI once it is created.*
 
 ***File Modification***\
-Check each file listed in Table 5 and modify every directory within those files to the directory that holds your data. For example, in configuration file 'pm_abcd_mrtm_future_impacts.ini' for xanthos model, change the directory of 'RootDir' to 'your-xanthos-location\example'.
+Check each file listed in [Table 5](#table5) and modify every directory within those files to the directory that holds your data. For example, in configuration file 'pm_abcd_mrtm_future_impacts.ini' for xanthos model, change the directory of 'RootDir' to 'your-xanthos-location\example'.
 
+<a name="table5"></a>
 **Table 5:** Files to be modified for each model.
 
 | Model | Programming Language | Files to be Modified |
@@ -254,11 +262,13 @@ Check each file listed in Table 5 and modify every directory within those files 
 ### 2. Model Integration
 
 #### (A) Workflow Overview
-Figure 1 details the workflow for reproducing all model outputs once the input data have been prepared.
+[Figure 1](#figure1) details the workflow for reproducing all model outputs once the input data have been prepared.
   * First, we run Xanthos to calculate runoff and hydropower under climate change scenarios. These runoff and hydropower outputs need to be bias corrected and convert to XML format in order to be able to feed into GCAM.
   * Then, we use GCAM to simulate integrated energy, water, land, socioeconomic, and climate interactions at regional/global scale.
   * To inform policy making at subregional scale, the output of GCAM will be post-processed to certain format for Demeter to downscale global land allocation to subregional land allocation.
   * Tethys is used to downscale global water withdrawal from GCAM to subregional water withdrawal and the model can directly use GCAM output without post-processing.
+
+<a name="figure1"></a>
 
 <p align="center"> <img src="extras/paper_figs/FIG1.png", width = '700'></p>
 
@@ -280,9 +290,9 @@ To run Xanthos:
   ```
 
 To process Xanthos outputs for GCAM:
-  * Change all the directories appeared in 'basin_runoff_analysis_plotting.R', 'hydro_analysis_plotting.R', and 'xanthos_postprocessing_fns.R' to paths that holds you data (directories in Table 6).
-  * Post-processing Xanthos runoff output by running R script 'basin_runoff_analysis_plotting.R' listed in Table 6. This will create same XML files with the downloaded ones within GCAM_input_idb_impacts/Water. You may replace corresponding XML files in gcam-core_LAC_v02_5Nov2019/input/idb/impacts/Water if you haven't done so.
-  * Post-processing Xanthos hydropower output by running R script 'hydro_analysis_plotting.R' listed in Table 6. This will create same XML files with the downloaded ones within GCAM_input_idb_impacts/Hydro. You may replace corresponding XML files in gcam-core_LAC_v02_5Nov2019/input/idb/impacts/Hydro if you haven't done so.
+  * Change all the directories appeared in 'basin_runoff_analysis_plotting.R', 'hydro_analysis_plotting.R', and 'xanthos_postprocessing_fns.R' to paths that holds you data (file locations listed in [Table 6](#table6)).
+  * Post-processing Xanthos runoff output by running R script 'basin_runoff_analysis_plotting.R' listed in [Table 6](#table6). This will create same XML files with the downloaded ones within GCAM_input_idb_impacts/Water. You may replace corresponding XML files in gcam-core_LAC_v02_5Nov2019/input/idb/impacts/Water if you haven't done so.
+  * Post-processing Xanthos hydropower output by running R script 'hydro_analysis_plotting.R' listed in [Table 6](#table6). This will create same XML files with the downloaded ones within GCAM_input_idb_impacts/Hydro. You may replace corresponding XML files in gcam-core_LAC_v02_5Nov2019/input/idb/impacts/Hydro if you haven't done so.
   
 ***GCAM LAC***
   * Go to gcam-core_LAC_v02_5Nov2019/exe and open 'run-gcam.bat' in a text editor. Change the Run GCAM line to point to configuration_LAC.xml: ```Objects-Main.exe -C configuration_LAC.xml```.
@@ -302,16 +312,17 @@ To process Xanthos outputs for GCAM:
 **Notes:* You may notice that there are three GCAM database folders already existing under tethys/example/Input/GCAM (e.g., IDBNexus_MIROC-ESM-CHEM_rcp6p0_Reference). This is because the GCAM output database from YOUR GCAM run will integrate all three scenarios together including Reference, Impacts, and Policy scenario. However, Tethys will only recognize the very first scenario (i.e., Reference scenario), while ignoring the other two scenarios. By separating three scenarios into three different GCAM databases, you will be able to run tethys with each database of a single scenario and get the water withdrawal output for each scenario. To do that, open config.ini, change the name for parameter 'GCAM-DBfile' to the database folder name you would like to use (e.g., IDBNexus_MIROC-ESM-CHEM_rcp6p0_Reference), and change the name for parameter 'ProjectName' to the name you prefer for the output folder (e.g., gcam_5p1_MIROC-ESM-CHEM_rcp6p0_Reference).
 
 ***Demeter***
-  * (Optional) Process GCAM output to Demeter required format by running 'gcam_to_demeter_land_allocation_rgcam.R' (see Table 6). Remember to change all the paths in the R script based on your data location. This R script creates the projected land class allocation files under Reference, Impacts, and Policy scenarios that are already existed in demeter/example/inputs/projected.
+  * (Optional) Process GCAM output to Demeter required format by running 'gcam_to_demeter_land_allocation_rgcam.R' (see [Table 6](#table6)). Remember to change all the paths in the R script based on your data location. This R script creates the projected land class allocation files under Reference, Impacts, and Policy scenarios that are already existed in demeter/example/inputs/projected.
   * In the terminal, run Demeter by navigating to demeter/example, and run
   ```
   python example_LAC.py
   ```
-  * The cell resolution for Demeter output is 5 arcmin (0.0833 degree). Aggregate output from 5 arcmin to 0.5 degree by running R script 'aggregate_5arcmin_to_0p5degree.py' (see Table 6). Remember to change all the directories in this python file according to your data location. Then, run the python script in the terminal by navigating to ArgentinaNexus/Figures/DemeterProcessing and run
+  * The cell resolution for Demeter output is 5 arcmin (0.0833 degree). Aggregate output from 5 arcmin to 0.5 degree by running R script 'aggregate_5arcmin_to_0p5degree.py' (see [Table 6](#table6)). Remember to change all the directories in this python file according to your data location. Then, run the python script in the terminal by navigating to ArgentinaNexus/Figures/DemeterProcessing and run
   ```
   python aggregate_5arcmin_to_0p5degree.py
   ```
 
+<a name="table6"></a>
 **Table 6:** R scripts for post-processing of model outputs.
 
 | Script | Description | Directory |
@@ -325,8 +336,9 @@ To process Xanthos outputs for GCAM:
 <br />
 
 ### 3. Reproduce Figures
-We also provide scripts (ArgentinaNexus/Figures/) for reproducing figures in our paper. Before running each script, make sure you have changed all the directories according to your data and file locations. You can change your desired output locations in the scripts.
+We also provide scripts (ArgentinaNexus/Figures/) for reproducing figures in our paper (see [Table 7](#table7)). Before running each script, make sure you have changed all the directories according to your data and file locations. You can change your desired output locations in the scripts.
 
+<a name="table7"></a>
 **Table 7:** R scripts for producing figures from the paper.
 
 | Script | Corresponding Figures |
