@@ -285,7 +285,7 @@ To process Xanthos outputs for GCAM:
   * Post-processing Xanthos hydropower output by running R script 'hydro_analysis_plotting.R' listed in Table 6. This will create same XML files with the downloaded ones within GCAM_input_idb_impacts/Hydro. You may replace corresponding XML files in gcam-core_LAC_v02_5Nov2019/input/idb/impacts/Hydro if you haven't done so.
   
 ***GCAM LAC***
-  * Go to gcam-core_LAC_v02_5Nov2019/exe and open 'run-gcam.bat' in a text editor. Change the Run GCAM line to point to configuration_LAC.xml: ```Objects-Main.exe - C configuration_LAC.xml```.
+  * Go to gcam-core_LAC_v02_5Nov2019/exe and open 'run-gcam.bat' in a text editor. Change the Run GCAM line to point to configuration_LAC.xml: ```Objects-Main.exe -C configuration_LAC.xml```.
   * Run GCAM by double clicking 'run-gcam.bat' to run the model.
   * Check GCAM output database located in gcam-core_LAC_v02_5Nov2019/output/FinalRuns/IDBNexus.
   * One quick way to check GCAM output database is to use GCAM ModelInterface. Go to gcam-core_LAC_v02_5Nov2019/ModelInterface, double click 'run-model-interface.bat'. For more instruction on using ModelInterface, please refer to [GCAM Documentation](https://github.com/JGCRI/gcam-core).
