@@ -109,7 +109,7 @@ For broader use of these data, we also provide post-processed input dataset dire
 | GCAM database | Tethys | <http://doi.org/10.5281/zenodo.4420154> | [basex files] created from GCAM runs by GCM. Each GCM run includes 8 combinations from 4 rcps and 2 scenarios (i.e., Climate Impacts scenario and Policy scenario) |
 
 #### Files Replaced for Argentina Study
-For the Argentina study, we replaced default files of each model with modified files we provide in [Table 3](#table3). For configuration and model run files, you will need to modify the directories based on the location of your models. More detailed summary of data and files can be found in [File Replacement Record](https://).
+For the Argentina study, we replaced default files of each model with modified files we provide in [Table 3](#table3). For configuration and model run files, you will need to modify the directories based on the location of your models. More detailed summary of data and files can be found in [File Replacement Record](docs/summary_modified_files.md).
 
 <a name="table3"></a>
 **Table 3:** Files replaced for model modifications in the Argentina Nexus study.
