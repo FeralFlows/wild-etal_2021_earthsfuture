@@ -76,7 +76,6 @@ Please note that the models used in this research are the versions labeled in [T
 | Model | Version | Repository Link | DOI |
 |:-:|:-:|---|---|
 | Xanthos | <v2.3.1> | <https://github.com/mengqi-z/xanthos/tree/v2.3.1-wild2020-ArgentinaNexus> | <https://doi.org/10.5281/zenodo.4404834> |
-| pDSSAT | <version> | <http://doi.org/10.5281/zenodo.4437737> | <http://doi.org/10.5281/zenodo.4437737> |
 | GCAM | <v5.1.3LAC> | <https://doi.org/10.5281/zenodo.3897519> | <https://doi.org/10.5281/zenodo.3897519> |
 | Tethys | <v1.2.0> | <https://github.com/mengqi-z/tethys/tree/v1.2.0-wild2020-ArgentinaNexus> | <http://doi.org/10.5281/zenodo.4405008> |
 | Demeter | <v1.1.0> | <https://github.com/mengqi-z/demeter/tree/v1.1.0-wild2020-ArgentinaNexus> | <https://doi.org/10.5281/zenodo.4404738> |
@@ -104,9 +103,10 @@ For broader use of these data, we also provide post-processed input dataset dire
 | Input Data Category | Model | DOI | Description |
 |---|---|---|---|
 | Climate | Xanthos | <link to DOI dataset> | [NPY files] 20 GCM/RCP climate projections. |
-| Input Data | GCAM | <http://doi.org/10.5281/zenodo.4437750> | Input data to GCAM modified for LAC region. |
+| Ag yield | pDSSAT | <http://doi.org/10.5281/zenodo.4437737> | To be added. |
+| GCAM Input Data | GCAM | <http://doi.org/10.5281/zenodo.4437750> | Input data to GCAM modified for LAC region. |
 | Projected Land Allocation | Demeter | <http://doi.org/10.5281/zenodo.4420156> | [CSV files] created from land use land cover projection from GCAM output. |
-| GCAM database | Tethys | <http://doi.org/10.5281/zenodo.4437750> | [basex files] created from GCAM runs by GCM. Each GCM run includes 8 combinations from 4 rcps and 2 scenarios (i.e., Climate Impacts scenario and Policy scenario) |
+| GCAM Output Database | Tethys | <http://doi.org/10.5281/zenodo.4437750> | [basex files] created from GCAM runs by GCM. Each GCM run includes 8 combinations from 4 rcps and 2 scenarios (i.e., Climate Impacts scenario and Policy scenario) |
 
 #### Files Replaced for Argentina Study
 For the Argentina study, we replaced default files of each model with modified files we provide in [Table 3](#table3). For configuration and model run files, you will need to modify the directories based on the location of your models. More detailed summary of data and files can be found in [File Replacement Record](docs/summary_modified_files.md).
@@ -140,6 +140,7 @@ For broader use, we provide output dataset from model runs with all 20 combinati
 | Model | DOI |
 |-------|-----|
 | Xanthos | <http://doi.org/10.5281/zenodo.4422095> |
+| pDSSAT | <http://doi.org/10.5281/zenodo.4437737> |
 | GCAM | <http://doi.org/10.5281/zenodo.4420154> | 
 | Demeter | <http://doi.org/10.5281/zenodo.4420156> | 
 | Tethys | <http://doi.org/10.5281/zenodo.4321776> | 
@@ -197,7 +198,7 @@ This experiment is conducted under Windows 64-bit operating system.
   * Replace gcam-core_LAC_v02_5Nov2019/exe/configuration_LAC.xml with ArgentinaNexus/DataFiles/GCAM/configuration_LAC.xml in the cloned ArgentinaNexus repository
   * Replace gcam-core_LAC_v02_5Nov2019/exe/batch_LAC.xml with ArgentinaNexus/DataFiles/GCAM/batch_LAC.xml
   * Upzip downloaded GCAM input data 'input.zip' and use it to replace the entire 'input' folder under gcam-core_LAC_v02_5Nov2019/
-  * (Optional) XML files within folders 'Ag', 'Hydro' and 'Water' under directory gcam-core_LAC_v02_5Nov2019/input/idb/impacts are reproduceable. Follow steps for Xanthos model run, post-process Xanthos outputs, and post-process ISIMIP outputs in [Reproduce My Experiment](#reproduce-my-experiment) section.
+  * (Optional) XML files within folders 'Ag', 'Hydro', and 'Water' under directory gcam-core_LAC_v02_5Nov2019/input/idb/impacts are reproduceable. Follow steps for Xanthos model run, post-process Xanthos outputs, and post-process ISIMIP outputs in [Reproduce My Experiment](#reproduce-my-experiment) section.
   
 **Notes:* GCAM v5.1.3-LAC is a modified version from GCAM-Core-v5.1.3 for the study in Latin America and the Caribbean (LAC) Region. A 64-bit Java is required to run GCAM. We recommend the open source version of Java ([OpenJDK](http://openjdk.java.net/)). More details on GCAM installation, setting up, and trouble shooting, please refer to [GCAM Documentation](https://github.com/JGCRI/gcam-core).
 
@@ -341,7 +342,7 @@ To process Xanthos outputs for GCAM:
   ```
 
 <a name="table6"></a>
-**Table 6:** R scripts for post-processing of model outputs.
+**Table 6:** R scripts for post-processing model outputs.
 
 | Script | Description | Directory |
 |--------|-------------|-----------|
@@ -349,7 +350,8 @@ To process Xanthos outputs for GCAM:
 | hydro_analysis_plotting.R | Convert Xanthos hydropower outputs to XML files for GCAM | ArgentinaNexus/Figures/XanthosProcessing/ |
 | xanthos_postprocessing_fns.R | All functions used in basin_runoff_analysis_plotting.R and hydro_analysis_plotting.R | ArgentinaNexus/Figures/XanthosProcessing/ |
 | gcam_to_demeter_land_allocation_rgcam.R | Select projected landuse from GCAM output database and convert to required input format for Demeter. Put created files under /Demeter/example/inputs/projected/ | ArgentinaNexus/Figures/DemeterProcessing/ |
-| aggregate_5arcmin_to_0p5degree.py | Aggregate Demeter output from 5 arcmin to 0.5 degree for further spatial landuse map plotting with metis | ArgentinaNexus/Figures/DemeterProcessing |
+| aggregate_5arcmin_to_0p5degree.py | Aggregate Demeter output from 5 arcmin to 0.5 degree for further spatial landuse map plotting with metis | ArgentinaNexus/Figures/DemeterProcessing/ |
+|step1_grid_to_basin_wtHA_yieldloop_arealoop.R<br>step2_ISIMIP_to_region_basin_irr_multipliers.R<br>step3_L205.ag_prodchange_cost_input_AdaptedForIntegrationBranch_othermodels.R<br>step3_L205.ag_prodchange_cost_input_AdaptedForIntegrationBrach.R<br>step4_csv2xml.R | Post-processing outputs from pDSSAT to create agricultural yield XML files | isimip_yield_processing/exe/ |
 
 <br />
 
