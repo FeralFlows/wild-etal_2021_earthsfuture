@@ -76,7 +76,7 @@ Please note that the models used in this research are the versions labeled in [T
 | Model | Version | Repository Link | DOI |
 |:-:|:-:|---|---|
 | Xanthos | <v2.3.1> | <https://github.com/mengqi-z/xanthos/tree/v2.3.1-wild2020-ArgentinaNexus> | <https://doi.org/10.5281/zenodo.4404834> |
-| pDSSAT | <version> | <link to code repository> | <DOI link> |
+| pDSSAT | <version> | <http://doi.org/10.5281/zenodo.4437737> | <http://doi.org/10.5281/zenodo.4437737> |
 | GCAM | <v5.1.3LAC> | <https://doi.org/10.5281/zenodo.3897519> | <https://doi.org/10.5281/zenodo.3897519> |
 | Tethys | <v1.2.0> | <https://github.com/mengqi-z/tethys/tree/v1.2.0-wild2020-ArgentinaNexus> | <http://doi.org/10.5281/zenodo.4405008> |
 | Demeter | <v1.1.0> | <https://github.com/mengqi-z/demeter/tree/v1.1.0-wild2020-ArgentinaNexus> | <https://doi.org/10.5281/zenodo.4404738> |
@@ -104,9 +104,9 @@ For broader use of these data, we also provide post-processed input dataset dire
 | Input Data Category | Model | DOI | Description |
 |---|---|---|---|
 | Climate | Xanthos | <link to DOI dataset> | [NPY files] 20 GCM/RCP climate projections. |
-| Hydrobiologic Data | GCAM | <http://doi.org/10.5281/zenodo.4420154> | [XML files] created from Xanthos and AgYield outputs, including runoff, hydropower, and crop yields. |
+| Input Data | GCAM | <http://doi.org/10.5281/zenodo.4437750> | Input data to GCAM modified for LAC region. |
 | Projected Land Allocation | Demeter | <http://doi.org/10.5281/zenodo.4420156> | [CSV files] created from land use land cover projection from GCAM output. |
-| GCAM database | Tethys | <http://doi.org/10.5281/zenodo.4420154> | [basex files] created from GCAM runs by GCM. Each GCM run includes 8 combinations from 4 rcps and 2 scenarios (i.e., Climate Impacts scenario and Policy scenario) |
+| GCAM database | Tethys | <http://doi.org/10.5281/zenodo.4437750> | [basex files] created from GCAM runs by GCM. Each GCM run includes 8 combinations from 4 rcps and 2 scenarios (i.e., Climate Impacts scenario and Policy scenario) |
 
 #### Files Replaced for Argentina Study
 For the Argentina study, we replaced default files of each model with modified files we provide in [Table 3](#table3). For configuration and model run files, you will need to modify the directories based on the location of your models. More detailed summary of data and files can be found in [File Replacement Record](docs/summary_modified_files.md).
@@ -188,7 +188,7 @@ This experiment is conducted under Windows 64-bit operating system.
 ***Pre-Requirements***
   
   * Download GCAM v5.1.3-LAC https://doi.org/10.5281/zenodo.3897519
-  * Download GCAM input data 'GCAM_input_idb_impacts.zip' http://doi.org/10.5281/zenodo.4420154
+  * Download GCAM input data 'input.zip' http://doi.org/10.5281/zenodo.4437750
   * Install Java 64 http://openjdk.java.net/
   * Install Windows XML Maker http://symbolclick.com/xmlmarker_1_1_setup.exe
   
@@ -196,15 +196,18 @@ This experiment is conducted under Windows 64-bit operating system.
 
   * Replace gcam-core_LAC_v02_5Nov2019/exe/configuration_LAC.xml with ArgentinaNexus/DataFiles/GCAM/configuration_LAC.xml in the cloned ArgentinaNexus repository
   * Replace gcam-core_LAC_v02_5Nov2019/exe/batch_LAC.xml with ArgentinaNexus/DataFiles/GCAM/batch_LAC.xml
-  * Copy XML files from ArgentinaNexus/DataFiles/GCAM/input/idb/reference and paste to gcam-core_LAC_v02_5Nov2019/input/idb/reference
-  * Copy XML files from ArgentinaNexus/DataFiles/GCAM/input/idb/policy and paste to gcam-core_LAC_v02_5Nov2019/input/idb/policy
-  * Replace folder 'Ag' within directory gcam-core_LAC_v02_5Nov2019/input/idb/impacts with same folder from downloaded 'GCAM_input_idb_impacts.zip'.
-  * (Optional) Replace folders 'Hydro' and 'Water' within gcam-core_LAC_v02_5Nov2019/input/idb/impacts with 'Hrdro' and 'Water' folders from downloaded 'GCAM_input_idb_impacts.zip'. If you want to reproduce those XML files within 'Water' and 'Hydro' by yourself, follow steps for Xanthos model run and post-process Xanthos results in [Reproduce My Experiment](#reproduce-my-experiment) section.
+  * Upzip downloaded GCAM input data 'input.zip' and use it to replace the entire 'input' folder under gcam-core_LAC_v02_5Nov2019/
+  * (Optional) XML files within folders 'Ag', 'Hydro' and 'Water' under directory gcam-core_LAC_v02_5Nov2019/input/idb/impacts are reproduceable. Follow steps for Xanthos model run, post-process Xanthos outputs, and post-process ISIMIP outputs in [Reproduce My Experiment](#reproduce-my-experiment) section.
   
 **Notes:* GCAM v5.1.3-LAC is a modified version from GCAM-Core-v5.1.3 for the study in Latin America and the Caribbean (LAC) Region. A 64-bit Java is required to run GCAM. We recommend the open source version of Java ([OpenJDK](http://openjdk.java.net/)). More details on GCAM installation, setting up, and trouble shooting, please refer to [GCAM Documentation](https://github.com/JGCRI/gcam-core).
 
+#### (C) pDSSAT
 
-#### (C) Xanthos, Demeter, and Tethys
+We provide post-processing codes for outputs of pDSSAT model to create XML files for GCAM in this section. For information on pDSSAT model, please refer to [Rosenzweig et al., 2016](https://doi.org/10.1073/pnas.1222463110).
+
+  * Download ISIMIP (pDSSAT included) data and post-processing codes http://doi.org/10.5281/zenodo.4437737
+
+#### (D) Xanthos, Demeter, and Tethys
 
 ***Pre-requirements***
 
@@ -263,7 +266,7 @@ Check each file listed in [Table 5](#table5) and modify every directory within t
 
 #### (A) Workflow Overview
 [Figure 1](#figure1) details the workflow for reproducing all model outputs once the input data have been prepared.
-  * First, we run Xanthos to calculate runoff and hydropower under climate change scenarios. These runoff and hydropower outputs need to be bias corrected and convert to XML format in order to be able to feed into GCAM.
+  * First, we run pDSSAT and Xanthos to calculate crop yield, runoff, and hydropower under climate change scenarios. These runoff and hydropower outputs need to be bias corrected. Outputs from both pDSSAT and Xanthos need to be converted to XML format in order to feed into GCAM.
   * Then, we use GCAM to simulate integrated energy, water, land, socioeconomic, and climate interactions at regional/global scale.
   * To inform policy making at subregional scale, the output of GCAM will be post-processed to certain format for Demeter to downscale global land allocation to subregional land allocation.
   * Tethys is used to downscale global water withdrawal from GCAM to subregional water withdrawal and the model can directly use GCAM output without post-processing.
@@ -291,8 +294,23 @@ To run Xanthos:
 
 To process Xanthos outputs for GCAM:
   * Change all the directories appeared in 'basin_runoff_analysis_plotting.R', 'hydro_analysis_plotting.R', and 'xanthos_postprocessing_fns.R' to paths that holds you data (file locations listed in [Table 6](#table6)).
-  * Post-processing Xanthos runoff output by running R script 'basin_runoff_analysis_plotting.R' listed in [Table 6](#table6). This will create same XML files with the downloaded ones within GCAM_input_idb_impacts/Water. You may replace corresponding XML files in gcam-core_LAC_v02_5Nov2019/input/idb/impacts/Water if you haven't done so.
-  * Post-processing Xanthos hydropower output by running R script 'hydro_analysis_plotting.R' listed in [Table 6](#table6). This will create same XML files with the downloaded ones within GCAM_input_idb_impacts/Hydro. You may replace corresponding XML files in gcam-core_LAC_v02_5Nov2019/input/idb/impacts/Hydro if you haven't done so.
+  * Post-process Xanthos runoff output by running R script 'basin_runoff_analysis_plotting.R' listed in [Table 6](#table6). This will create same XML files within the downloaded GCAM input data folder: input/idb/impacts/Water. You may replace corresponding XML files in gcam-core_LAC_v02_5Nov2019/input/idb/impacts/Water with the ones you reproduced.
+  * Post-process Xanthos hydropower output by running R script 'hydro_analysis_plotting.R' listed in [Table 6](#table6). This will create same XML files within the downloaded GCAM input data folder: input/idb/impacts/Hydro. You may replace corresponding XML files in gcam-core_LAC_v02_5Nov2019/input/idb/impacts/Hydro with the ones you reproduced.
+
+**Note:* The post-process step is optional because all reproduced XML files are already included in the downloaded GCAM input data folder.
+  
+***pDSSAT***
+
+  * Unzip downloaded isimip_yield_processing.zip and navigate to isimip_yield_processing/exe.
+  * Run all the R scripts following the order from 'step1' to 'step4' labeled in the file name. Remember do not change the current working directory in R in between the steps.
+  * You can find the created XML files in isimip_yield_processing/data/scenario_agprodchange_gcam512_uruguay/xml. The 20 files used in Argentina study are named in the format of 'ag_prodchange_[rcp]\_[gcm]\_pdssat.xml', where
+    * [rcp] can be replaced by rcp2p6, rcp4p5, rcp6p0, or rcp8p5
+    * [gcm] can be replaced by gfdl, hadgem2, ipsl, miroc, or noresm1
+  * These XML files are the same with those under gcam-core_LAC_v02_5Nov2019/input/idb/impacts/Ag. If you want to use files reproduced by you, please change their names to the format of 'ag_prodchange_[gcm]_[rcp].xml', where
+    * [gcm] can be replaced by GFDL-ESM2M, HadGEM2-ES, IPSL-CM5A-LR, MIROC-ESM-CHEM, or NorESM1-M
+    * [rcp] can be replaced by rcp2p6, rcp4p5, rcp6p0, or rcp8p5
+
+**Note:* The post-process step is optional because all reproduced XML files are already included in the downloaded GCAM input data folder.
   
 ***GCAM LAC***
   * Go to gcam-core_LAC_v02_5Nov2019/exe and open 'run-gcam.bat' in a text editor. Change the Run GCAM line to point to configuration_LAC.xml: ```Objects-Main.exe -C configuration_LAC.xml```.
