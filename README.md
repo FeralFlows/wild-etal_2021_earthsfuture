@@ -109,7 +109,7 @@ For broader use of these data, we also provide post-processed input dataset dire
 | GCAM Database | Tethys | <http://doi.org/10.5281/zenodo.4437750> | [basex files] created from GCAM runs by GCM. Each GCM run includes 8 combinations from 4 rcps and 2 scenarios (i.e., Climate Impacts scenario and Policy scenario) |
 
 #### Files Replaced for Argentina Study
-For the Argentina study, we replaced default files of each model with modified files we provide in [Table 3](#table3). For configuration and model run files, you will need to modify the directories based on the location of your models. More detailed summary of data and files can be found in [File Replacement Record](docs/summary_modified_files.md).
+For the Argentina study, we replaced default files of each model with modified files we provide in [Table 3](#table3). For configuration and model run files, you will need to modify the directories based on the location of your models. More detailed summary of data and files can be found in [File Replacement Details](docs/summary_modified_files.md).
 
 <a name="table3"></a>
 **Table 3:** Files replaced for model modifications in the Argentina Nexus study.
@@ -204,10 +204,10 @@ This experiment is conducted under Windows 64-bit operating system.
 
 #### (C) pDSSAT
 
-We provide codes to post-process pDSSAT outputs and create agriculture yield XML files for GCAM in this section. However, this step is OPTIONAL because we also provide XML files for agriculture yield in the downloadable GCAM input data in [Table 2](#table2). For information on pDSSAT model, please refer to [Rosenzweig et al., 2016](https://doi.org/10.1073/pnas.1222463110).
+We provide codes to post-process pDSSAT outputs and create agriculture yield XML files for GCAM in this section. However, this step is OPTIONAL because we also provide XML files for agriculture yield in the downloadable GCAM input data in [Table 2](#table2). For information on ISIMIP/pDSSAT model, please refer to [Calvin et al., 2020](https://doi.org/10.1142/S2010007820500050); [Synder et al., 2020](https://doi.org/10.1371/journal.pone.0237918); and [Rosenzweig et al., 2016](https://doi.org/10.1073/pnas.1222463110).
 
 <details>
-<summary>Click here to see optional steps to produce XML files for agriculture yield.</summary>
+<summary>Click here to see optional steps to reproduce XML files for agriculture yield.</summary>
 <br />
 
   * Download ISIMIP (pDSSAT included) data and post-processing codes http://doi.org/10.5281/zenodo.4437737
