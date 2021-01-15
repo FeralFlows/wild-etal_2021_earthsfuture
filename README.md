@@ -68,7 +68,7 @@ Update your journal reference here after acceptance.
 <!-------------------------->
 <!-------------------------->
 
-Please note that the models used in this research are the versions labeled in [Table 1](#table1).
+This section provides details regarding the models we ran as part of this study. Some aspects of this study required that we use the outputs of modeling runs performed by others, such as GCM runs and crop model runs. Details regarding this other modeling are provided in the Input Data section. Please note that the models used in this research are the versions labeled in [Table 1](#table1). 
 
 <a name="table1"></a>
 **Table 1:** Model repository and DOI links.
@@ -103,10 +103,13 @@ For broader use of these data, we also provide post-processed input dataset dire
 | Input Data Category | Model | DOI | Description |
 |---|---|---|---|
 | Climate | Xanthos | <link to DOI dataset> | [NPY files] 20 GCM/RCP climate projections. |
-| Ag Yield | pDSSAT | <http://doi.org/10.5281/zenodo.4437737> | To be added. |
+| Ag Yield | pDSSAT | <http://doi.org/10.5281/zenodo.4437737> | Data and scripts for post-processing pDSSAT outputs into a form useable by GCAM. |
 | GCAM Input Data | GCAM | <http://doi.org/10.5281/zenodo.4437750> | Input data to GCAM modified for LAC region. |
 | Projected Land Allocation | Demeter | <http://doi.org/10.5281/zenodo.4420156> | [CSV files] created from land use land cover projection from GCAM output. |
 | GCAM Database | Tethys | <http://doi.org/10.5281/zenodo.4437750> | [basex files] created from GCAM runs by GCM. Each GCM run includes 8 combinations from 4 rcps and 2 scenarios (i.e., Climate Impacts scenario and Policy scenario) |
+
+**Disclaimer:* pDSSAT modeling was conducted by [Rosenzweig et al.](https://doi.org/10.1073/pnas.1222463110) as part of AgMIP, not as part of this study. We simply post-processed the outputs of pDSSAT (one of several models included in AgMIP) from [Rosenzweig et al.](https://doi.org/10.1073/pnas.1222463110) into a form that could be used by GCAM. [Synder et al.](https://doi.org/10.1371/journal.pone.0237918) describes the approach to doing that post-processing. The DOI provided here for pDSSAT contains the data and scripts required to conduct the post-processing for this paper, similar to what is described in [Synder et al.](https://doi.org/10.1371/journal.pone.0237918).
+
 
 #### Files Replaced for Argentina Study
 For the Argentina study, we replaced default files of each model with modified files we provide in [Table 3](#table3). For configuration and model run files, you will need to modify the directories based on the location of your models. More detailed summary of data and files can be found in [File Replacement Details](docs/summary_modified_files.md).
@@ -200,7 +203,7 @@ This experiment is conducted under Windows 64-bit operating system.
   * Upzip downloaded GCAM input data 'input.zip' and use it to replace the entire 'input' folder under gcam-core_LAC_v02_5Nov2019/
   * (Optional) XML files within folders 'Ag', 'Hydro', and 'Water' under directory gcam-core_LAC_v02_5Nov2019/input/idb/impacts are reproduceable. Follow steps for Xanthos model run, post-process Xanthos outputs, and post-process pDSSAT outputs in [Reproduce My Experiment](#reproduce-my-experiment) section.
   
-**Notes:* GCAM v5.1.3-LAC is a modified version from GCAM-Core-v5.1.3 for the study in Latin America and the Caribbean (LAC) Region. A 64-bit Java is required to run GCAM. We recommend the open source version of Java ([OpenJDK](http://openjdk.java.net/)). More details on GCAM installation, setting up, and trouble shooting, please refer to [GCAM Documentation](https://github.com/JGCRI/gcam-core).
+**Note:* GCAM v5.1.3-LAC is a modified version from GCAM-Core-v5.1.3 for the study in Latin America and the Caribbean (LAC) Region. A 64-bit Java is required to run GCAM. We recommend the open source version of Java ([OpenJDK](http://openjdk.java.net/)). More details on GCAM installation, setting up, and trouble shooting, please refer to [GCAM Documentation](https://github.com/JGCRI/gcam-core).
 
 #### (C) pDSSAT
 
@@ -244,7 +247,7 @@ We provide codes to post-process pDSSAT outputs and create agriculture yield XML
   * (Optional) Install PyCharm Professional version https://www.jetbrains.com/pycharm/download/#section=windows
   * Install Python 2.7 and Python 3.8 https://www.python.org/downloads/
   
-**Notes:* We will refer all the model folders to 'xanthos/', 'demeter/', and 'tethys/' in the following instructions. If you choose to download models directly from provided DOI links instead of cloning, please change each of the downloaded folder name to 'xanthos', 'demeter', and 'tethys'.
+**Note:* We will refer all the model folders to 'xanthos/', 'demeter/', and 'tethys/' in the following instructions. If you choose to download models directly from provided DOI links instead of cloning, please change each of the downloaded folder name to 'xanthos', 'demeter', and 'tethys'.
 
 ***Model Installation and Setup***\
 The user is able to install each model as a Python package from terminal or command line. Navigate to each one of the downloaded model folders (xanthos/, demeter/, and tethys/) and run
@@ -254,7 +257,7 @@ python setup.py install
 ```
 
 
-**Notes:* More details of setting up Python using PyCharm for Xanthos, Demeter, and Tethys can be found in this [PyCharm setup tutorial](docs/Python_setup_for_xanthos_demeter_tethys.md). You can also go to Github page for each model listed in [Contributing Models](#contributing-models) for more information.
+**Note:* More details of setting up Python using PyCharm for Xanthos, Demeter, and Tethys can be found in this [PyCharm setup tutorial](docs/Python_setup_for_xanthos_demeter_tethys.md). You can also go to Github page for each model listed in [Contributing Models](#contributing-models) for more information.
 
 ***File Replacement***\
 For downloaded models from DOI links provided in [Contributing Models](#contributing-models) section, most of the input dataset in terms of a single GCM/RCP scenario (i.e., MIROC-ESM-CHEM forced by RCP 6.0) selected in the Argentina study is included, except for Xanthos due to large size of the dataset. Follow the steps below to add data into the downloaded xanthos folder.
@@ -329,7 +332,7 @@ To process Xanthos outputs for GCAM:
   python example.py
   ```
 
-**Notes:* You may notice that there are three GCAM database folders already existing under tethys/example/Input/GCAM (e.g., IDBNexus_MIROC-ESM-CHEM_rcp6p0_Reference). This is because the GCAM output database from YOUR GCAM run will integrate all three scenarios together including Reference, Impacts, and Policy scenario. However, Tethys will only recognize the very first scenario (i.e., Reference scenario), while ignoring the other two scenarios. By separating three scenarios into three different GCAM databases, you will be able to run tethys with each database of a single scenario and get the water withdrawal output for each scenario. To do that, open config.ini, change the name for parameter 'GCAM-DBfile' to the database folder name you would like to use (e.g., IDBNexus_MIROC-ESM-CHEM_rcp6p0_Reference), and change the name for parameter 'ProjectName' to the name you prefer for the output folder (e.g., gcam_5p1_MIROC-ESM-CHEM_rcp6p0_Reference).
+**Note:* You may notice that there are three GCAM database folders already existing under tethys/example/Input/GCAM (e.g., IDBNexus_MIROC-ESM-CHEM_rcp6p0_Reference). This is because the GCAM output database from YOUR GCAM run will integrate all three scenarios together including Reference, Impacts, and Policy scenario. However, Tethys will only recognize the very first scenario (i.e., Reference scenario), while ignoring the other two scenarios. By separating three scenarios into three different GCAM databases, you will be able to run tethys with each database of a single scenario and get the water withdrawal output for each scenario. To do that, open config.ini, change the name for parameter 'GCAM-DBfile' to the database folder name you would like to use (e.g., IDBNexus_MIROC-ESM-CHEM_rcp6p0_Reference), and change the name for parameter 'ProjectName' to the name you prefer for the output folder (e.g., gcam_5p1_MIROC-ESM-CHEM_rcp6p0_Reference).
 
 ***Demeter***
   * (Optional) Process GCAM output to Demeter required format by running 'gcam_to_demeter_land_allocation_rgcam.R' (see [Table 6](#table6)). Remember to change all the paths in the R script based on your data location. This R script creates the projected land class allocation files under Reference, Impacts, and Policy scenarios that are already existed in demeter/example/inputs/projected.
