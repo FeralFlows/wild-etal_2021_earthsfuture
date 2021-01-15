@@ -50,9 +50,8 @@ if __name__ == '__main__':
     # the number of 5 arcmin grid cells in each 0.5 degree cell
     n_grids = 36
 
-    runs = ['reference_2020-10-28_20h29m05s',
-            'impacts_2020-10-29_08h31m08s',
-            'policy_2020-10-29_09h21m42s']
+    runs = ['IPSL-CM5A-LR_rcp8p5_Impacts_2020-12-08_09h14m59s',
+            'IPSL-CM5A-LR_rcp8p5_Policy_2020-12-08_10h01m21s']
     
     pfts = ['water', 'forest',
             'shrub', 'grass', 'urban', 'snow', 'sparse', 'corn_irr',
@@ -71,7 +70,7 @@ if __name__ == '__main__':
     
         demeter_data_dir = os.path.join(root_dir, run, 'spatial_landcover_tabular')
 
-        scenario = run.split('_')[0]
+        scenario = run.split('_')[3]
 
         for yr in gcam_years:
             
