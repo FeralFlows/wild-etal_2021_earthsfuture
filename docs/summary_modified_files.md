@@ -12,7 +12,7 @@
 
 ## Xanthos
 
-'~/' in Table 1 represents you-xanthos-location/.
+'~/' in Table 1 represents your-xanthos-location/.
 
 **Table 1:** File modification for Xanthos model.
 
@@ -34,44 +34,44 @@
 
 **Table 2:** File modification for GCAM LAC.
 
-| File Name | Scenario | Region | Sector | XML | Description |
+| Config and Batch File | Scenario | Region | Sector | XML | Description |
 |-|-|-|-|-|-|
-| Configuration_LAC.xml | Reference | Global |  | LACglobal_ref_gas_cc_sw_interp | ~/idb/reference/ |
-| Configuration_LAC.xml | Reference | Global |  | LACglobal_ref_electricity_water | ~/idb/reference/ |
-| Configuration_LAC.xml | Reference | Global |  | LACglobal_ref_transportation_UCD_CORE | ~/idb/reference/ |
-| batch_LAC.xml | Reference | Colombia | Socioeconomics | Colombia_refPopGDP_gSSP2 | ~/idb/reference/ |
-| batch_LAC.xml | Reference | Colombia | Socioeconomics | Colombia_refPopGDP_demand_input | ~/idb/reference/ |
-| batch_LAC.xml | Reference | Colombia | Socioeconomics | Colombia_refPopGDP_cement_incelas_gssp2 | ~/idb/reference/ |
-| batch_LAC.xml | Reference | Colombia | Socioeconomics | Colombia_refPopGDP_industry_incelas_gssp2 | ~/idb/reference/ |
-| batch_LAC.xml | Reference | Colombia | Energy | Colombia_ref_hydro | ~/idb/reference/ |
-| batch_LAC.xml | Reference | Colombia | Water | Colombia_ref_livestock_water_demand_coeff | ~/idb/reference/ |
-| batch_LAC.xml | Reference | Colombia | Water | Colombia_ref_L210.TechCoef_mod | ~/idb/reference/ |
-| batch_LAC.xml | Reference | Colombia | Water | Colombia_ref_L232.TechCoef_mod | ~/idb/reference/ |
-| batch_LAC.xml | Reference | Colombia | Water | Colombia_ref_L2072.AgCoef_IrrWaterWdraw_ag_mgmt_mod2 | ~/idb/reference/ |
-| batch_LAC.xml | Reference | Uruguay | Socioeconomics | Uruguay_refPopGDP_socioeconomics_gSSP2 | ~/idb/reference/ |
-| batch_LAC.xml | Reference | Uruguay | Socioeconomics | Uruguay_refPopGDP_industry_incelas_gssp2 | ~/idb/reference/ |
-| batch_LAC.xml | Reference | Uruguay | Socioeconomics | Uruguay_refPopGDP_cement_incelas_gssp2 | ~/idb/reference/ |
-| batch_LAC.xml | Reference | Uruguay | Socioeconomics | Uruguay_refPopGDP_bld_agg_gSSP2 | ~/idb/reference/ |
-| batch_LAC.xml | Reference | Uruguay | Socioeconomics | Uruguay_refPopGDP_trn_agg_gSSP2 | ~/idb/reference/ |
-| batch_LAC.xml | Reference | Uruguay | Socioeconomics | Uruguay_refPopGDP_demand_input | ~/idb/reference/ |
-| batch_LAC.xml | Reference | Uruguay | Energy | Uruguay_refFinalNrg | ~/idb/reference/ |
-| batch_LAC.xml | Reference | Uruguay | Electricity | Uruguay_refElecShareWeights_L223.SubsectorShrwt | ~/idb/reference/ |
-| batch_LAC.xml | Reference | Uruguay | Electricity | Uruguay_refElecHydro | ~/idb/reference/ |
-| batch_LAC.xml | Reference | Uruguay | Water | Uruguay_refWater | ~/idb/reference/ |
-| batch_LAC.xml | Reference | Uruguay | Water | Uruguay_refWat_L2072.AgCoef_IrrWaterCons_ag_mgmt | ~/idb/reference/ |
-| batch_LAC.xml | Reference | Uruguay | Water | Uruguay_refWat_L2072.AgCoef_IrrWaterWdraw_ag_mgmt | ~/idb/reference/ |
-| batch_LAC.xml | Reference | Argentina | Socioeconomics | Argentina_refPop_gSSP2 | ~/idb/reference/ |
-| batch_LAC.xml | Impacts | Global | Energy | hydro_impacts_HadGEM2-ES_rcp8p5 | ~/idb/impacts/Hydro/ |
-| batch_LAC.xml | Impacts | Global | Water | runoff_impacts_HadGEM2-ES_rcp8p5 | ~/idb/impacts/Water/ |
-| batch_LAC.xml | Impacts | Global | Agriculture | ag_prodchange_HadGEM2-ES_rcp8p5 | ~/idb/impacts/Ag/ |
-| batch_LAC.xml | Policy | Global | Policy | CarbonTax_CO2_NonCO2_CO_ARG | ~/idb/policy/ |
-| batch_LAC.xml | Policy | Global | Policy | CarbonTax_CO2_NonCO2_LINK_CO_ARG | ~/idb/policy/ |
+| Configuration_LAC.xml | Reference | Global |  | LACglobal_ref_gas_cc_sw_interp.xml | ~/idb/reference/ |
+| Configuration_LAC.xml | Reference | Global |  | LACglobal_ref_electricity_water.xml | ~/idb/reference/ |
+| Configuration_LAC.xml | Reference | Global |  | LACglobal_ref_transportation_UCD_CORE.xml | ~/idb/reference/ |
+| batch_LAC.xml | Reference | Colombia | Socioeconomics | Colombia_refPopGDP_gSSP2.xml | ~/idb/reference/ |
+| batch_LAC.xml | Reference | Colombia | Socioeconomics | Colombia_refPopGDP_demand_input.xml | ~/idb/reference/ |
+| batch_LAC.xml | Reference | Colombia | Socioeconomics | Colombia_refPopGDP_cement_incelas_gssp2.xml | ~/idb/reference/ |
+| batch_LAC.xml | Reference | Colombia | Socioeconomics | Colombia_refPopGDP_industry_incelas_gssp2.xml | ~/idb/reference/ |
+| batch_LAC.xml | Reference | Colombia | Energy | Colombia_ref_hydro.xml | ~/idb/reference/ |
+| batch_LAC.xml | Reference | Colombia | Water | Colombia_ref_livestock_water_demand_coeff.xml | ~/idb/reference/ |
+| batch_LAC.xml | Reference | Colombia | Water | Colombia_ref_L210.TechCoef_mod.xml | ~/idb/reference/ |
+| batch_LAC.xml | Reference | Colombia | Water | Colombia_ref_L232.TechCoef_mod.xml | ~/idb/reference/ |
+| batch_LAC.xml | Reference | Colombia | Water | Colombia_ref_L2072.AgCoef_IrrWaterWdraw_ag_mgmt_mod2.xml | ~/idb/reference/ |
+| batch_LAC.xml | Reference | Uruguay | Socioeconomics | Uruguay_refPopGDP_socioeconomics_gSSP2.xml | ~/idb/reference/ |
+| batch_LAC.xml | Reference | Uruguay | Socioeconomics | Uruguay_refPopGDP_industry_incelas_gssp2.xml | ~/idb/reference/ |
+| batch_LAC.xml | Reference | Uruguay | Socioeconomics | Uruguay_refPopGDP_cement_incelas_gssp2.xml | ~/idb/reference/ |
+| batch_LAC.xml | Reference | Uruguay | Socioeconomics | Uruguay_refPopGDP_bld_agg_gSSP2.xml | ~/idb/reference/ |
+| batch_LAC.xml | Reference | Uruguay | Socioeconomics | Uruguay_refPopGDP_trn_agg_gSSP2.xml | ~/idb/reference/ |
+| batch_LAC.xml | Reference | Uruguay | Socioeconomics | Uruguay_refPopGDP_demand_input.xml | ~/idb/reference/ |
+| batch_LAC.xml | Reference | Uruguay | Energy | Uruguay_refFinalNrg.xml | ~/idb/reference/ |
+| batch_LAC.xml | Reference | Uruguay | Electricity | Uruguay_refElecShareWeights_L223.SubsectorShrwt.xml | ~/idb/reference/ |
+| batch_LAC.xml | Reference | Uruguay | Electricity | Uruguay_refElecHydro.xml | ~/idb/reference/ |
+| batch_LAC.xml | Reference | Uruguay | Water | Uruguay_refWater.xml | ~/idb/reference/ |
+| batch_LAC.xml | Reference | Uruguay | Water | Uruguay_refWat_L2072.AgCoef_IrrWaterCons_ag_mgmt.xml | ~/idb/reference/ |
+| batch_LAC.xml | Reference | Uruguay | Water | Uruguay_refWat_L2072.AgCoef_IrrWaterWdraw_ag_mgmt.xml | ~/idb/reference/ |
+| batch_LAC.xml | Reference | Argentina | Socioeconomics | Argentina_refPop_gSSP2.xml | ~/idb/reference/ |
+| batch_LAC.xml | Impacts | Global | Energy | hydro_impacts_HadGEM2-ES_rcp8p5.xml | ~/idb/impacts/Hydro/ |
+| batch_LAC.xml | Impacts | Global | Water | runoff_impacts_HadGEM2-ES_rcp8p5.xml | ~/idb/impacts/Water/ |
+| batch_LAC.xml | Impacts | Global | Agriculture | ag_prodchange_HadGEM2-ES_rcp8p5.xml | ~/idb/impacts/Ag/ |
+| batch_LAC.xml | Policy | Global | Policy | CarbonTax_CO2_NonCO2_CO_ARG.xml | ~/idb/policy/ |
+| batch_LAC.xml | Policy | Global | Policy | CarbonTax_CO2_NonCO2_LINK_CO_ARG.xml | ~/idb/policy/ |
 
 <br />
 
 ## Demeter
 
-'~/' in Table 3 represents you-demeter-location/example/.
+'~/' in Table 3 represents your-demeter-location/example/.
 
 **Table 3:** File modification for Demeter model.
 
@@ -90,7 +90,7 @@
 
 ## Tethys
 
-'~/' in Table 4 represents you-tethys-location/example/.
+'~/' in Table 4 represents your-tethys-location/example/.
 
 **Table 4:** File modification for Tethys model.
 
