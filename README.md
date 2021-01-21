@@ -111,14 +111,16 @@ For broader use of these data, we also provide post-processed input dataset dire
 **Disclaimer:* pDSSAT modeling was conducted by [Rosenzweig et al.](https://doi.org/10.1073/pnas.1222463110) as part of AgMIP, not as part of this study. We simply post-processed the outputs of pDSSAT (one of several models included in AgMIP) from [Rosenzweig et al.](https://doi.org/10.1073/pnas.1222463110) into a form that could be used by GCAM. [Synder et al.](https://doi.org/10.1371/journal.pone.0237918) describes the approach to doing that post-processing. The DOI provided here for pDSSAT contains the data and scripts required to conduct the post-processing for this paper, similar to what is described in [Synder et al.](https://doi.org/10.1371/journal.pone.0237918).
 
 
-#### Files Replaced for Argentina Study
-For the Argentina study, we replaced default files of each model with modified files we provide in [Table 3](#table3). For configuration and model run files, you will need to modify the directories based on the location of your models. More detailed summary of data and files can be found in [File Replacement Details](docs/summary_modified_files.md).
+#### File Modification and Replacement
+For the Argentina study, we replaced some of default files in each model with modified files listed in [Table 3](#table3) to better represent dynamics of the LAC region. This includes separating Uruguay as an individual GCAM region and adding socioeconomic data for Colombia, Uruguay, and Argentina in GCAM, etc. More detailed summary of data and files can be found in [File Replacement Details](docs/summary_modified_files.md).
+
+The Demeter observation dataset is a combination of MIRCA2000 data ([Portmann et al., 2010](https://doi.org/10.1029/2008GB003435)) and MODIS data ([Sulla-Menashe and Friedl, 2018](https://icdc.cen.uni-hamburg.de/fileadmin/user_upload/icdc_Dokumente/MODIS/mcd12_user_guide_v6.pdf)). For details of method that regroups MIRCA2000 crop types to GCAM crop types, please refer to [Huang et al., 2019](https://doi.org/10.1016/j.jhydrol.2019.04.046).
 
 <a name="table3"></a>
 **Table 3:** Files replaced for model modifications in the Argentina Nexus study.
 
 | File Category | Model | Directory |
-|---------------|-------|-----------|
+|---|---|---|
 | Runoff Module | Xanthos | ArgentinaNexus/DataFiles/Xanthos/example/input/runoff |
 | Xanthos Configuration and Model Run | Xanthos | ArgentinaNexus/DataFiles/Xanthos/example |
 | GCAM Configuration and Batch Files | GCAM | ArgentinaNexus/DataFiles/GCAM |
@@ -340,7 +342,7 @@ To process Xanthos outputs for GCAM:
   ```
   python example_LAC.py
   ```
-  * The cell resolution for Demeter output is 5 arcmin (0.0833 degree). Aggregate output from 5 arcmin to 0.5 degree by running R script 'aggregate_5arcmin_to_0p5degree.py' (see [Table 6](#table6)). Remember to change all the directories in this python file according to your data location. Then, run the python script in the terminal by navigating to ArgentinaNexus/Figures/DemeterProcessing and run
+  * The cell resolution for Demeter output is 5 arcmin (0.0833 degree). Aggregate output from 5 arcmin to 0.5 degree by running R script 'aggregate_5arcmin_to_0p5degree.py' (see [Table 6](#table6)). Remember to change all the directories in this python file according to your data location and the 'run' names associated with your demeter output folder names. Then, run the python script in the terminal by navigating to ArgentinaNexus/Figures/DemeterProcessing and run
   ```
   python aggregate_5arcmin_to_0p5degree.py
   ```
