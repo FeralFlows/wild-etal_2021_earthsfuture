@@ -103,7 +103,7 @@ For broader use of these data, we also provide post-processed input dataset dire
 | Input Data Category | Model | DOI | Description |
 |---|---|---|---|
 | Climate | Xanthos | <link to DOI dataset> | [NPY files] 20 GCM/RCP climate projections. |
-| Ag Yield | pDSSAT | <http://doi.org/10.5281/zenodo.4437737> | Data and scripts for post-processing pDSSAT outputs into a form useable by GCAM. |
+| Ag Yield | pDSSAT |  | Data and scripts for post-processing pDSSAT outputs into a form useable by GCAM. |
 | GCAM Input Data | GCAM | <http://doi.org/10.5281/zenodo.4437750> | Input data to GCAM modified for LAC region. |
 | Projected Land Allocation | Demeter | <http://doi.org/10.5281/zenodo.4420156> | [CSV files] created from land use land cover projection from GCAM output. |
 | GCAM Database | Tethys | <http://doi.org/10.5281/zenodo.4437750> | [basex files] created from GCAM runs by GCM. Each GCM run includes 8 combinations from 4 rcps and 2 scenarios (i.e., Climate Impacts scenario and Policy scenario) |
@@ -145,7 +145,7 @@ For broader use, we provide output dataset from model runs with all 20 combinati
 | Model | DOI |
 |-------|-----|
 | Xanthos | <http://doi.org/10.5281/zenodo.4422095> |
-| pDSSAT | <http://doi.org/10.5281/zenodo.4437737> |
+| pDSSAT |  |
 | GCAM | <http://doi.org/10.5281/zenodo.4420154> | 
 | Demeter | <http://doi.org/10.5281/zenodo.4420156> | 
 | Tethys | <http://doi.org/10.5281/zenodo.4321776> | 
