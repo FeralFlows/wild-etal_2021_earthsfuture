@@ -50,7 +50,6 @@ This study seeks to understand how Argentina’s energy, water, and land (EWL) s
 
 [1] **Metis:** Khan, Z., Wild, T., Vernon, C., Miller, A., Hejazi, M., Clarke, L., Miralles-Wilhelm, F., Castillo, R.M., Moreda, F., Bereslawski, J.L., Suriano, M. and Casado, J., (2020). Metis v1.1.0. Github. [![GitHub tag](https://img.shields.io/github/v/release/JGCRI/metis)](https://github.com/JGCRI/metis/releases/tag/v1.0.0)
 
-
 [2] **GCAM:** Khan, Zarrar. (2019, November 5). gcam-v5.1.3LAC_khan_et_al_2020_Uruguay (Version 5.3.1LAC). Zenodo. [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3897519.svg)](https://doi.org/10.5281/zenodo.3897519)
 
 [3] **Xanthos:** Braun Caleb, Vernon Chris, Link Robert, Evanoff Jason, & Khan Zarrar. (2020, December 30). xanthos-v2.3.1 for Wild_et_al_2020_ArgentinaNexus (Version v2.3.1-wild2020-ArgentinaNexus). Zenodo. [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4404834.svg)](https://doi.org/10.5281/zenodo.4404834)
@@ -69,7 +68,7 @@ This study seeks to understand how Argentina’s energy, water, and land (EWL) s
 ## Journal Reference
 <!-------------------------->
 <!-------------------------->
-Update your journal reference here after acceptance.
+Wild, T.B., Khan, Z., Zhao, M., Suriano, M., Bereslawski, J., Roberts, P., Cassado, J., Gavino-Novillo, M., Clarke, L., Hejazi, M., Miralles-Wilhelm, F., Munoz-Castillo, R., Vernon, C., Snyder, A., Yarlagadda, B., Birnbaum, A., Lamontagne, J., White, D., Ojeda-Matos, G. (in revision). The Implications of Global Change for the Co-Evolution of Argentina’s Integrated Energy-Water-Land Systems. Earth’s Future.
 
 [Back to Contents](#contents)
 
