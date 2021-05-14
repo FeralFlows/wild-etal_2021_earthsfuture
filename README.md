@@ -9,6 +9,7 @@
 <!-------------------------->
 <!-------------------------->
 - [Abstract](#abstract)
+- [Plain Language Summary](#plain)
 - [Code Reference](#code-reference)
 - [Journal Reference](#journal-reference)
 - [Contributing Models](#contributing-models)
@@ -20,6 +21,18 @@
 <!-------------------------->
 <!-------------------------->
 ## Abstract
+<!-------------------------->
+<!-------------------------->
+
+This study seeks to understand how Argentina’s energy, water, and land (EWL) systems will co-evolve under a representative array of human and earth system influences, including socioeconomic change, climate change, and climate policy. To capture Argentina’s sub-national EWL dynamics in the context of global change, we couple the Global Change Analysis Model with a suite of consistent, gridded sectoral downscaling models to explore multiple stakeholder-engaged scenarios. Across scenarios, Argentina has the economic opportunity to use its vast land resources to satisfy growing domestic and international demand for crops, such as oil (e.g., soy) and biomass. The human (rather than earth) system produces the most dominant changes in mid-century EWL resource use. A Reference scenario characterized by modest socioeconomic growth projects a 40% increase in Argentina’s agricultural production by 2050 (relative to 2020) by using 50,000 km2 of additional cropland and 40% more water. A Climate Policy scenario designed to achieve net-zero carbon emissions globally shortly after mid-century projects that Argentina could use 100,000 km2 of additional land (and 65% more water) to grow biomass and other crops. The burden of navigating these national opportunities and challenges could fall disproportionately on a subset of Argentina’s river basins. The Colorado and Negro basins could experience moderate-to-severe water scarcity as they simultaneously navigate substantial irrigated crop demand growth and climate-induced declines in natural water availability. Argentina serves as a generalizable testbed to demonstrate that multi-scale EWL planning challenges can be identified and managed more effectively via integrated analysis of coupled human-earth systems.
+
+[Back to Contents](#contents)
+
+<br />
+
+<!-------------------------->
+<!-------------------------->
+## Plain Language Summary
 <!-------------------------->
 <!-------------------------->
 
