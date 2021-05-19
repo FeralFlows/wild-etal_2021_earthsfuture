@@ -111,6 +111,7 @@ rownames(df_boundary) <- 'A'
 shape_boundary <- sp::SpatialPolygonsDataFrame(shape_boundary, data = as.data.frame(df_boundary))
 
 region <- 'Argentina'
+subRegType_i <- 'hydroshed' # hydroshed
 gcm <- 'MIROC-ESM-CHEM'
 rcp <- 'rcp6p0'
 main_folder <- paste(region, gcm, rcp, sep = '_')
@@ -147,9 +148,9 @@ col_gather <- c('water', 'forest', 'shrub', 'grass',
                 'biomass_grass_irr', 'biomass_grass_rfd', 'biomass_tree_irr', 'biomass_tree_rfd')
 
 df_data <- rbindlist(all_data, idcol = FALSE) %>% 
-  rename(gridcode = pkey_0p5_deg, lon = longitude, lat = latitude) %>%
+  dplyr::rename(gridcode = pkey_0p5_deg, lon = longitude, lat = latitude) %>%
   gather(key = 'crop', value = 'value', col_gather)
-
+rm(all_data)
 # Filter data for Argentina region
 df_data_argentina <- df_data %>% 
   filter(lat <= boundary@ymax & lat >= boundary@ymin & lon <= boundary@xmax & lon >= boundary@xmin)
@@ -161,32 +162,32 @@ df_data_argentina <- df_data %>%
 # and (2) policy and reference
 # Note: this plotting may take hours. You may select less crop types in order to reduce run time
 if(T){
-  # crop_i <-c('water', 'forest', 'shrub', 'grass',
-  #            'urban', 'snow', 'sparse', 'corn_irr',
-  #            'fibercrop_irr', 'foddergrass_irr', 'fodderherb_irr', 'misccrop_irr',
-  #            'oilcrop_irr', 'othergrain_irr', 'palmfruit_irr', 'rice_irr',
-  #            'root_tuber_irr', 'sugarcrop_irr', 'wheat_irr', 'corn_rfd',
-  #            'fibercrop_rfd', 'foddergrass_rfd', 'fodderherb_rfd', 'misccrop_rfd',
-  #            'oilcrop_rfd', 'othergrain_rfd', 'palmfruit_rfd', 'rice_rfd',
-  #            'root_tuber_rfd', 'sugarcrop_rfd', 'wheat_rfd', 'otherarableland',
-  #            'biomass_grass_irr', 'biomass_grass_rfd', 'biomass_tree_irr', 'biomass_tree_rfd')
-  crop_i <-c('corn_irr',
+  crop_i <-c('water', 'forest', 'shrub', 'grass',
+             'urban', 'snow', 'sparse', 'corn_irr',
              'fibercrop_irr', 'foddergrass_irr', 'fodderherb_irr', 'misccrop_irr',
              'oilcrop_irr', 'othergrain_irr', 'palmfruit_irr', 'rice_irr',
              'root_tuber_irr', 'sugarcrop_irr', 'wheat_irr', 'corn_rfd',
              'fibercrop_rfd', 'foddergrass_rfd', 'fodderherb_rfd', 'misccrop_rfd',
              'oilcrop_rfd', 'othergrain_rfd', 'palmfruit_rfd', 'rice_rfd',
-             'root_tuber_rfd', 'sugarcrop_rfd', 'wheat_rfd',
+             'root_tuber_rfd', 'sugarcrop_rfd', 'wheat_rfd', 'otherarableland',
              'biomass_grass_irr', 'biomass_grass_rfd', 'biomass_tree_irr', 'biomass_tree_rfd')
+  # crop_i <-c('corn_irr',
+  #            'fibercrop_irr', 'foddergrass_irr', 'fodderherb_irr', 'misccrop_irr',
+  #            'oilcrop_irr', 'othergrain_irr', 'palmfruit_irr', 'rice_irr',
+  #            'root_tuber_irr', 'sugarcrop_irr', 'wheat_irr', 'corn_rfd',
+  #            'fibercrop_rfd', 'foddergrass_rfd', 'fodderherb_rfd', 'misccrop_rfd',
+  #            'oilcrop_rfd', 'othergrain_rfd', 'palmfruit_rfd', 'rice_rfd',
+  #            'root_tuber_rfd', 'sugarcrop_rfd', 'wheat_rfd',
+  #            'biomass_grass_irr', 'biomass_grass_rfd', 'biomass_tree_irr', 'biomass_tree_rfd')
   # crop_i <- c('biomass_grass_rfd', 'biomass_tree_rfd')
   
   # crop_i <- c('biomass_grass_irr', 'biomass_tree_irr')
   
-  nameAppend_i <- c('')
+  nameAppend_i <- c('_LandUse')
   df <- df_data_argentina
   scenario_i <- c('reference', 'impacts', 'policy')
   year_i <- c(2020, 2030, 2040, 2050)
-  
+
   data_2 <- df %>% 
     filter(scenario %in% scenario_i & year %in% year_i & crop %in% crop_i) %>% 
     tidyr::unite(class, c(crop, scenario, year), sep = '-', remove = TRUE) %>% 
@@ -196,7 +197,7 @@ if(T){
                                 subRegShape = shape,
                                 aggType = 'depth',
                                 subRegCol = 'subRegion',
-                                subRegType = 'hydroshed',
+                                subRegType = subRegType_i,
                                 nameAppend = '_Demeter',
                                 folderName = main_folder,
                                 saveFiles = T)
@@ -212,8 +213,9 @@ if(T){
           as.data.frame()
         missing <- dplyr::setdiff(shape$subRegion, temp$subRegion) %>% 
           as.data.frame() %>% 
-          rename(subRegion = '.')
+          dplyr::rename(subRegion = '.')
         n_miss <- length(missing$subRegion)
+        print(paste0('Missing number of subregions for ', crop, ' | ', scenario, ' | ', year, ' are: ', n_miss))
         if(n_miss > 0){
           df_missing <- data.frame(subRegion = missing$subRegion,
                                    value = rep(1e-10, times = n_miss),
@@ -222,7 +224,7 @@ if(T){
                                    x = rep('x', times = n_miss),
                                    param = rep('param', times = n_miss),
                                    aggType = rep('depth', times = n_miss),
-                                   subRegType = rep('hydroshed', times = n_miss))
+                                   subRegType = rep(subRegType_i, times = n_miss))
           temp <- rbind(temp, df_missing)
         }
         poly_table_temp <- rbind(poly_table_temp, temp)
@@ -233,8 +235,32 @@ if(T){
   # regular plot
   poly_table_2 <- poly_table_temp %>%
     tidyr::separate(class, sep = '-', into = c('class', 'scenario', 'x')) %>% 
-    mutate(param = class,
-           classPalette = 'pal_green')
+    dplyr::mutate(param = class,
+                  classPalette = 'pal_green',
+                  value = if_else(value < 1e-6, 1e-6, value))
+  
+  metis.mapsProcess(polygonTable = poly_table_2,
+                    subRegShape = shape,
+                    subRegCol = 'subRegion',
+                    subRegType = subRegType_i,
+                    scenRef = 'reference',
+                    nameAppend = nameAppend_i,
+                    folderName = main_folder,
+                    xRange = year_i,
+                    scaleRange = c(0,1),
+                    mapTitleOn = F,
+                    legendFixedBreaks = 8,
+                    boundaryRegShape = shape_boundary,
+                    extendedLabels = T,
+                    extdendedLabelSize = 0.7,
+                    cropToBoundary = F,
+                    extension = T,
+                    expandPercent = 25,
+                    # classPalette = 'pal_green',
+                    classPaletteDiff = 'pal_div_BrGn',
+                    facetCols = 4,
+                    animateOn = F,
+                    pdfpng = 'pdf')
   
   if(T){
     # aggregate biomass_grass_irr and biomass_tree_irr together
@@ -261,27 +287,35 @@ if(T){
     poly_table_crop$param[grepl('rfd', poly_table_crop$param)] <- 'crop_rfd'
     poly_table_crop$class <- poly_table_crop$param
     poly_table_crop <- poly_table_crop %>% 
-      group_by(aggType, subRegType, scenario, x, subRegion, param, class, classPalette) %>% 
-      summarise(value = sum(value)) %>% 
-      ungroup()
+      dplyr::filter(class %in% c('crop_irr', 'crop_rfd')) %>% 
+      dplyr::group_by(aggType, subRegType, scenario, x, subRegion, param, class, classPalette) %>% 
+      dplyr::summarise(value = sum(value)) %>% 
+      dplyr::ungroup()
     
     # plot by crop total
     poly_table_crop_all <- poly_table_crop
     poly_table_crop_all[grepl('crop_irr|crop_rfd', poly_table_crop_all)] <- 'crop_all'
     poly_table_crop_all <- poly_table_crop_all %>% 
-      group_by(aggType, subRegType, scenario, x, subRegion, param, class, classPalette) %>% 
-      summarise(value = sum(value)) %>% 
-      ungroup
+      dplyr::group_by(aggType, subRegType, scenario, x, subRegion, param, class, classPalette) %>% 
+      dplyr::summarise(value = sum(value)) %>% 
+      dplyr::ungroup()
+    
+    # plot by land allocation type
+    # c('water', 'forest', 'shrub', 'grass', 'urban', 'snow', 'sparse')
+    poly_table_landAlloc <- poly_table_2 %>% 
+      dplyr::filter(class %in% c('water', 'forest', 'shrub', 'grass', 'urban', 'snow', 'sparse')) %>% 
+      dplyr::bind_rows(poly_table_crop_all %>% dplyr::mutate(class = 'crop')) %>% 
+      dplyr::mutate(param = 'landAlloc_All')
   }
   
-  poly_table_list <- list(poly_table_biomass_irr, poly_table_biomass_rfd, poly_table_crop, poly_table_crop_all)
+  poly_table_list <- list(poly_table_biomass_irr, poly_table_biomass_rfd, poly_table_crop, poly_table_crop_all, poly_table_landAlloc)
   
   # Plot all the crop land allocations by crop types
   for(poly_table_i in poly_table_list){
     metis.mapsProcess(polygonTable = poly_table_i,
-                      subRegShape = shape_ext,
+                      subRegShape = shape,
                       subRegCol = 'subRegion',
-                      subRegType = 'hydroshed',
+                      subRegType = subRegType_i, # 'hydroshed',
                       scenRef = 'reference',
                       nameAppend = nameAppend_i,
                       folderName = main_folder,
@@ -303,7 +337,6 @@ if(T){
 }
 
 
-
 # Spatial mapping function for Tethys and Xanthos output in km3
 sp_mapping <- function(gridFiles, subRegShape, subRegShapeExt, boundaryRegShape,
                        aggType, subRegCol, subRegType, nameAppend, folderName, years, ...){
@@ -318,7 +351,7 @@ sp_mapping <- function(gridFiles, subRegShape, subRegShapeExt, boundaryRegShape,
                                 saveFiles = T)
   
   # Find missing polygons
-  shape_area <- data.frame(subRegion = subRegShape@data$subRegion, area =  subRegShape@data$SUB_AREA) # area is in km2
+  shape_area <- data.frame(subRegion = subRegShape@data$subRegion, area = raster::area(subRegShape)) # area is in m2
   
   poly_table_temp <- poly_table[0,]
   for(scenario_t in unique(poly_table$scenario)){
@@ -330,17 +363,17 @@ sp_mapping <- function(gridFiles, subRegShape, subRegShapeExt, boundaryRegShape,
             as.data.frame()
           missing <- dplyr::setdiff(subRegShape$subRegion, temp$subRegion) %>% 
             as.data.frame() %>% 
-            rename(subRegion = '.')
+            dplyr::rename(subRegion = '.')
           n_miss <- length(missing$subRegion)
           if(n_miss > 0){
             sprintf('-------------------- Adding %s missing polygons --------------------', n_miss)
             missing <- data.frame(subRegion = missing$subRegion,
                                   value = rep(1e-10, times = n_miss),
-                                  year = paste('X', rep(year, times = n_miss), sep = ''),
-                                  scenario = rep(scenario, times = n_miss),
-                                  x = rep(year, times = n_miss),
-                                  class = rep(class, times = n_miss),
-                                  param = rep(param, times = n_miss),
+                                  year = paste('X', rep(year_t, times = n_miss), sep = ''),
+                                  scenario = rep(scenario_t, times = n_miss),
+                                  x = rep(year_t, times = n_miss),
+                                  class = rep(class_t, times = n_miss),
+                                  param = rep(param_t, times = n_miss),
                                   aggType = rep(aggType, times = n_miss),
                                   subRegType = rep(subRegType, times = n_miss)) %>% 
               dplyr::select(names(temp))
@@ -358,14 +391,24 @@ sp_mapping <- function(gridFiles, subRegShape, subRegShapeExt, boundaryRegShape,
   if(aggType == 'vol'){
     poly_table_2 <- poly_table_temp %>% 
       left_join(shape_area, by = subRegCol) %>% 
-      mutate(value = (value/area)*1000*1000) # convert from km to mm
+      mutate(value = (value*1000^3/area)*1000) # convert from vol (km3) to depth (mm)
   }else{
     poly_table_2 <- poly_table_temp
     # facetCols <- ceiling(length(unique(poly_table_2$class)))
   }
   
-  facetCols <- ifelse(length(years) <= 4, length(years), ceiling(length(years)/2))
   
+  facetCols <- if (length(years) <= 4) {
+    length(years)
+  }
+  else if (length(years) <= 10) {
+    ceiling(length(years)/2)
+  }
+  else {
+    ceiling(sqrt(length(years)))
+  }
+  
+  # facetCols <- 3
 
   # Plot maps
   metis.mapsProcess(polygonTable = poly_table_2,
@@ -390,6 +433,27 @@ sp_mapping <- function(gridFiles, subRegShape, subRegShapeExt, boundaryRegShape,
   return(poly_table_2)
 }
 
+# Calculate grid cell area and convert from water volumn to depth
+grid_vol_to_depth <- function(grid_data, shape){
+  grid <- sp::SpatialPointsDataFrame(sp::SpatialPoints(
+    coords = (cbind(grid_data$lon, grid_data$lat))),
+    data = grid_data %>% dplyr::select(lat, lon))
+  
+  sp::gridded(grid) <- TRUE
+  grid_raster <- raster::stack(grid); grid_raster
+  grid_poly <- raster::rasterToPolygons(grid_raster)
+  sp::proj4string(grid_poly) <- sp::proj4string(shape)
+  
+  # Calculate grid cell area and left join based on lat and lon
+  poly_area <- grid_poly@data %>%
+    mutate(area=raster::area(grid_poly)) # area in m2
+  grid_data <- grid_data %>%
+    left_join(poly_area, by=c('lat', 'lon')) %>% 
+    mutate(value = value*1000^3/area*1000) %>% 
+    dplyr::select(-area)# depth in mm
+  
+  return(grid_data)
+}
 
 #------------------------------- Tethys Output -------------------------------#
 
@@ -413,9 +477,12 @@ tethys_mapping <- function(wd_sector, years, boundary, scenario, gcm, rcp){
   wd_argentina <- wd %>% 
     filter(lat <= boundary@ymax & lat >= boundary@ymin & lon <= boundary@xmax & lon >= boundary@xmin)
   
+  # Convert volume to depth based on each grid cell
+  wd_argentina_depth <- grid_vol_to_depth(wd_argentina, shape)
+  
   nameAppend <- paste('_Tethys', scenario, sep = '_')
   
-  demand <- sp_mapping(wd_argentina, shape, shape_ext, shape_boundary, 'vol',
+  demand <- sp_mapping(wd_argentina_depth, shape, shape, shape_boundary, 'depth',
                       'subRegion', 'hydroshed', nameAppend, main_folder, years)
   return(demand)
 }
@@ -423,6 +490,64 @@ demand_reference <- tethys_mapping('wdtotal', years, boundary, 'Reference', gcm,
 demand_impacts <- tethys_mapping('wdtotal', years, boundary, 'Impacts', gcm, rcp)
 demand_policy <- tethys_mapping('wdtotal', years, boundary, 'Policy', gcm, rcp)
 
+# Plot each water withdrawal sector in one frame
+tethys_indv_mapping <- function(gcm, rcp, scenario, boundary, shape){
+  tethys_output <- 'E:/NEXO-UA/Tethys/example/Output'
+  gcam_v <- 'gcam_5p1'
+  time_scale <- '2005-2050'
+  folder_name <- paste(gcam_v, gcm, rcp, time_scale, scenario, sep = '_')
+  folder_path <- paste(tethys_output, folder_name, sep = '/')
+  file_list <- list.files(folder_path, pattern = 'km3peryr', recursive = TRUE, full.names = TRUE)
+  file_list <- file_list[-c(7,8)]
+  
+  # Read Tethys files
+  #Read Demeter data in paralell####
+  cl <- makeSOCKcluster(4)
+  clusterExport(cl, list('%>%', 'gather'), envir = .GlobalEnv)
+  
+  #function to read before run####
+  read_files_tethys <- function(file, header = TRUE, sep = 'auto', ...){
+    data <- data.table::fread(file, header = header, sep = sep, ...)
+    filename <- basename(file[1])
+    class <- tolower(strsplit(basename(filename), '\\_|\\.')[[1]][1])
+    patterns <- c('wddom', 'wdelec', 'wdirr', 'wdliv', 'wdmfg', 'wdmin')
+    replacement <- c('Domestic', 'Electric', 'Irrigation', 'Livestock', 'Manufacturing', 'Mining')
+    for (i in seq_along(patterns)){
+      class <- gsub(patterns[i], replacement[i], class, perl = TRUE)
+    }
+    data$class <- class
+    
+    years <- sprintf('%s', seq(from = 2005, to = 2050, by = 5))
+    data <- data %>% 
+      as.data.frame() %>% 
+      tidyr::gather(key = 'year', value = 'value', years) %>% 
+      dplyr::select(-ID, -ilon, -ilat)
+    
+    return(data)
+  }
+  
+  # basename is a function to choose file by name
+  wd_indv <- parLapply(cl, file_list, read_files_tethys)
+  stopCluster(cl)
+  
+  wd_indv_df <- rbindlist(wd_indv, idcol = FALSE)
+  
+  # Filter data to boundary area
+  wd_indv_boundary <- wd_indv_df %>% 
+    dplyr::filter(lat <= boundary@ymax & lat >= boundary@ymin & lon <= boundary@xmax & lon >= boundary@xmin)
+  
+  # Convert volume to depth based on each grid cell
+  wd_indv_boundary_depth <- grid_vol_to_depth(wd_indv_boundary, shape)
+  
+  nameAppend <- paste('_Tethys', scenario, 'Indv', sep = '_')
+  
+  demand <- sp_mapping(wd_indv_boundary_depth, shape, shape, shape_boundary, 'depth',
+                       'subRegion', 'hydroshed', nameAppend, main_folder, years)
+}
+
+tethys_indv_mapping(gcm, rcp, 'Reference', boundary, shape)
+tethys_indv_mapping(gcm, rcp, 'Impacts', boundary, shape)
+tethys_indv_mapping(gcm, rcp, 'Policy', boundary, shape)
 
 
 
@@ -440,13 +565,15 @@ runoff_file <- paste0(paste(runoff_var_name, gcm, rcp, time_scale, sep = '_'), '
 # Read Xanthos runoff output in km3
 runoff <- data.table::fread(file = paste(xanthos_output, runoff_file, sep = '/'), header = TRUE)
 coord_0p5deg <- data.table::fread(file = 'coordinates.csv', header = FALSE) %>% 
-  rename(gridcode = V1,
+  dplyr::rename(gridcode = V1,
          longitude = V2,
          latitude = V3,
          x = V4,
          y = V5)
 
 runoff_years <- sprintf('%s', seq(from = 1950, to = 2099, by = 1))
+years <- sprintf('%s', seq(from = 2005, to = 2050, by = 5))
+
 runoff_argentina <- runoff %>% 
   mutate(lat = coord_0p5deg$latitude,
          lon = coord_0p5deg$longitude) %>% 
@@ -455,10 +582,16 @@ runoff_argentina <- runoff %>%
            lat >= boundary@ymin & lon <= boundary@xmax & lon >= boundary@xmin) %>% 
   dplyr::select(-id)
 
+runoff_argentina_depth <- grid_vol_to_depth(runoff_argentina, shape)
 
-
-supply <- sp_mapping(runoff_argentina, shape, shape_ext, shape_boundary, 'vol',
+supply <- sp_mapping(runoff_argentina_depth, shape, shape, shape_boundary, 'depth',
                      'subRegion', 'hydroshed', '_Xanthos', main_folder, years)
+
+# Plot Historical runoff from projections
+# Run this step with years spanning from 1950 - 2010
+years <- sprintf('%s', seq(from = 1950, to = 2010, by = 1))
+supply <- sp_mapping(runoff_argentina_depth, shape, shape, shape_boundary, 'depth',
+                     'subRegion', 'hydroshed', '_XanthosHist', main_folder, years)
 
 
 if(F){
@@ -473,7 +606,7 @@ if(F){
   # Read Xanthos runoff output in km3
   runoff <- data.table::fread(file = paste(xanthos_output, runoff_file, sep = '/'), header = TRUE)
   coord_0p5deg <- data.table::fread(file = 'coordinates.csv', header = FALSE) %>% 
-    rename(gridcode = V1,
+    dplyr::rename(gridcode = V1,
            longitude = V2,
            latitude = V3,
            x = V4,
@@ -481,16 +614,17 @@ if(F){
   
   years_hist <- c('2005', '2010')
   runoff_years <- sprintf('%s', seq(from = 1970, to = 2010, by = 1))
-  runoff_argentina <- runoff %>% 
+  runoff_argentina_hist <- runoff %>% 
     mutate(lat = coord_0p5deg$latitude,
            lon = coord_0p5deg$longitude) %>% 
     gather(key = 'year', value = 'value', all_of(runoff_years)) %>% 
-    filter(year %in% c('2005', '2010'), lat <= boundary@ymax & lat >= boundary@ymin & lon <= boundary@xmax & lon >= boundary@xmin) %>% 
+    filter(year %in% runoff_years, lat <= boundary@ymax & lat >= boundary@ymin & lon <= boundary@xmax & lon >= boundary@xmin) %>% 
     dplyr::select(-id)
   
+  runoff_argentina_hist_depth <- grid_vol_to_depth(runoff_argentina_hist, shape)
   
-  supply_hist <- sp_mapping(runoff_argentina, shape, shape_ext, shape_boundary, 'vol',
-                       'subRegion', 'hydroshed', '_XanthosHist', 'Argentina', years_hist)
+  supply_hist <- sp_mapping(runoff_argentina_hist_depth, shape, shape, shape_boundary, 'depth',
+                       'subRegion', 'hydroshed', '_XanthosHist', 'Argentina_Hist', runoff_years)
 }
 
 
@@ -505,8 +639,7 @@ scarcity_mapping <- function(demand, supply, scenario){
                              'scenario',
                              'param',
                              'aggType',
-                             'subRegType',
-                             'area')) %>% 
+                             'subRegType')) %>% 
     mutate(value = value.x/value.y) %>% 
     dplyr::select(-value.x, -value.y) 
   
@@ -524,7 +657,7 @@ scarcity_mapping <- function(demand, supply, scenario){
   
   # Plot maps
   metis.mapsProcess(polygonTable = poly_table_scarcity,
-                    subRegShape = shape_ext,
+                    subRegShape = shape,
                     subRegCol = 'subRegion',
                     subRegType = 'hydroshed',
                     nameAppend = nameAppend,

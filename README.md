@@ -58,6 +58,8 @@ This study seeks to understand how Argentina’s energy, water, and land (EWL) s
 
 [5] **Tethys:** Vernon Chris, Link Robert, & Braun Caleb. (2020, December 31). tethys-v1.2.0 for Wild_et_al_2020_ArgentinaNexus (Version v1.2.0-wild2020-ArgentinaNexus). Zenodo. [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4405008.svg)](https://doi.org/10.5281/zenodo.4405008)
 
+[6] **plutus:** Zhao, M., Binsted, M., Wild, T.B., Khan, Z., Yarlagadda, B., Iyer, G., Vernon, C., Patel, P., Santos da Silva, S.R., Calvin, K.V., (2021, May 18). JGCRI/plutus: plutus v1.0.0 (Version v1.0.0). Zenodo. [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4771311.svg)](https://doi.org/10.5281/zenodo.4771311)
+
 
 [Back to Contents](#contents)
 
@@ -384,8 +386,8 @@ We also provide scripts (ArgentinaNexus/Figures/) for reproducing figures in our
 | argentina_basin_plot.R | Figure 2 |
 | basin_runoff_analysis_plotting.R <br /> hydro_analysis_plotting.R| Figure 3 |
 | spatial_runoff_diff_mapping_xanthos.R | Figure 4 |
-| EmissionGoalLine_Plot.R | Figure 5 |
-| metis.masterX_Argentina.R | Figure 6 |
+| EmissionGoalLine_Plot.R | Figure S4 |
+| metis.masterX_Argentina.R | Figure 5 - 6 |
 | metis_plot_argentina.R | Figure 7 - 10 |
 
 
