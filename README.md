@@ -1,5 +1,6 @@
+[![DOI](https://zenodo.org/badge/212380931.svg)](https://zenodo.org/badge/latestdoi/212380931)
+
 # The Implications of Global Change for the Co-Evolution of Argentina’s Integrated Energy-Water-Land Systems
-<!--your zenodo badge here-->
 
 <br />
 
