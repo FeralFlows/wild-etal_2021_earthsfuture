@@ -71,7 +71,7 @@ This study seeks to understand how Argentina’s energy, water, and land (EWL) s
 ## Journal Reference
 <!-------------------------->
 <!-------------------------->
-Wild, T.B., Khan, Z., Zhao, M., Suriano, M., Bereslawski, J., Roberts, P., Cassado, J., Gavino-Novillo, M., Clarke, L., Hejazi, M., Miralles-Wilhelm, F., Munoz-Castillo, R., Vernon, C., Snyder, A., Yarlagadda, B., Birnbaum, A., Lamontagne, J., White, D., Ojeda-Matos, G. (in revision). The Implications of Global Change for the Co-Evolution of Argentina’s Integrated Energy-Water-Land Systems. Earth’s Future.
+Wild, T.B., Khan, Z., Zhao, M., Suriano, M., Bereslawski, J., Roberts, P., Cassado, J., Gavino-Novillo, M., Clarke, L., Hejazi, M., Miralles-Wilhelm, F., Munoz-Castillo, R., Vernon, C., Snyder, A., Yarlagadda, B., Birnbaum, A., Lamontagne, J., White, D., Ojeda-Matos, G. 2021. The Implications of Global Change for the Co‐Evolution of Argentina's Integrated Energy‐Water‐Land Systems. Earth's Future, 9(8), p.e2020EF001970. https://doi.org/10.1029/2020EF001970
 
 [Back to Contents](#contents)
 
